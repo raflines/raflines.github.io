@@ -1,0 +1,293 @@
+	a {
+		color: white;
+		font-weight: bold;
+	}
+	
+	font {
+		text-shadow: 2px 2px #000000;
+	}
+	
+	.stamps {
+		margin-right: 10px;
+	}
+	
+	.socials {
+		font-size: 16px;
+		text-align: bottom;
+		
+		width: 128px;
+		height: 32px;
+	}
+	
+	.flizzy_button {
+		background-color: #FFFFCB;
+		border-radius: 4px;
+		border: 2px solid #DDD9BA;
+		width: 80px;
+		height: 35px;
+		bottom: 0;
+	}
+	
+	.flizzy_button:hover {
+		background-color: #F2F2C1;
+	}
+	
+	.flizzyAppearing {
+		animation-name: flizzyAppear;
+		animation-duration: 2500ms;
+		animation-fill-mode: forwards;
+	}
+	
+	@keyframes flizzyAppear{
+	  100%{
+		opacity: 1;
+	  }
+	  0%{
+		display: none;
+		opacity: 0;
+	  }
+	}
+	
+	.flizzyDisappearing {
+		animation-name: flizzyDisappearAgainIKnowThisIsNotGoodPracticeButWhatever;
+		animation-duration: 500ms;
+		animation-fill-mode: forwards;
+	}
+	
+	.flizzyDisappearingSadIKnowThisIsARealUnpolishedAndStupidWayOfCodingTheDifferentAnimationSpeedsIAmSoSorry {
+		animation-name: flizzyDisappear;
+		animation-duration: 3500ms;
+		animation-fill-mode: forwards;
+	}
+	
+	@keyframes flizzyDisappear{
+	  0%{
+		opacity: 1;
+	  }
+	  100%{
+		opacity: 0.05;
+	  }
+	}
+	
+	@keyframes flizzyDisappearAgainIKnowThisIsNotGoodPracticeButWhatever{
+	  0%{
+		opacity: 1;
+	  }
+	  100%{
+		display: none;
+		opacity: 0;
+	  }
+	}
+	
+	/* CODE I STOLE FROM ANA IN STACKOVERFLOW !! */
+	 .circle-container {
+        position: relative;
+        width: 384px;
+        height: 384px;
+        padding: 44.8px;
+        /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
+        border: dashed 1px;
+        border-radius: 50%;
+        margin: 28px auto 0;
+    }
+    .circle-container a {
+        display: block;
+        position: absolute;
+        width: 96px; height: 96px;
+        margin: -32px;
+		top: 200px;
+		left: 220px;
+    }
+    .circle-container img { display: block; width: 100%; }
+	.center:hover { filter: drop-shadow(0 0 0.50rem #DE4B00); }
+    .circle-container img:hover { filter: drop-shadow(0 0 0.50rem #ffffff); }
+    .deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
+    .deg30 { transform: rotate(30deg) translate(12em) rotate(-30deg); }
+    .deg60 { transform: rotate(60deg) translate(12em) rotate(-60deg); }
+    .deg90 { transform: rotate(90deg) translate(12em) rotate(-90deg); }
+    .deg120 { transform: rotate(120deg) translate(12em) rotate(-120deg); }
+    .deg150 { transform: rotate(150deg) translate(12em) rotate(-150deg); }
+    .deg180 { transform: translate(-12em); }
+    .deg210 { transform: rotate(210deg) translate(12em) rotate(-210deg); }
+    .deg240 { transform: rotate(240deg) translate(12em) rotate(-240deg); }
+    .deg270 { transform: rotate(270deg) translate(12em) rotate(-270deg); }
+    .deg300 { transform: rotate(300deg) translate(12em) rotate(-300deg); }
+    .deg330 { transform: rotate(330deg) translate(12em) rotate(-330deg); }
+	
+	
+	/* CODE I STOLE FROM MYSTIC MAYA WITH HER PERMISSION!!!!!!!! I LOVE YOU!!!!!!!! */
+		@font-face {font-family: "Pixelated MS Sans Serif";src: url(/assets/funkytown_stamps/maya/ms_sans_serif.woff2);}
+		.maya_title{
+			width: 64px;
+			height: 50px;
+			background-color: #0000FF;
+			border-radius: 50%;
+			text-align: center;
+			color: white;
+			font-size: 2vh;
+			font-style: italic;
+		}
+		.maya_subtitle{
+			font-size: 1vh;
+			font-style: italic;
+			color: #0000FF;
+			padding:0px;
+		}
+		.maya_button {
+			font-family: "Pixelated MS Sans Serif",Arial;
+			-webkit-font-smoothing: antialiased;
+			font-size: 15px;
+			box-sizing: border-box;
+			border: 1px solid #003c74;
+			padding-inline: 12px;
+			background: linear-gradient(180deg,#fff,#ecebe5 86%,#d8d0c4);
+			box-shadow: none;
+			border-radius: 3px;
+		}
+		.maya_button:hover {
+			background: linear-gradient(180deg,#fff,#e1e0dc 86%,#cfcac0);
+			border-color: #003c74;
+			cursor: pointer;
+		}
+		.maya_button:active {box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey}
+		.maya_button:focus {
+			box-shadow: inset -1px 1px #cee7ff, inset 1px 2px #98b8ea, inset -2px 2px #bcd4f6, inset 1px -1px #89ade4, inset 2px -2px #89ade4;
+			outline: 1px dotted #000;
+			outline-offset: -4px;
+		}
+
+		.maya_container {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+		}
+		/*Title Bars*/
+		.maya_titlebar{
+			/*background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#005bff 95%,#003dd7 96%,#003dd7); blue */
+			background: linear-gradient(180deg,#F9CACF,#D86F95 8%,#DD7C9D 40%,#B72A5C 88%,#B72A5C 93%,#B82C5D 95%,#B82C5D 96%,#B82C5D);
+			border-top-left-radius: 8px;
+			border-top-right-radius: 7px;
+			border-top: 1px solid #B82C5D;
+			border-left: 1px solid #B82C5D;
+			border-right: 1px solid #B82C5D;
+			text-shadow: 1px 1px #9D1444;
+			margin-top: 0px;
+			padding: 3px 5px 3px 3px;
+			height: 21px;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+
+		.maya_titlebartext{
+			font-family: "Trebuchet MS";
+			width:64px;
+			font-size: 1vw;
+			text-align: left;
+			font-size: 1vh;
+			color: white;
+			text-shadow: 1px 1px #9D1444;
+			padding-left: 3px;
+		}
+
+		.maya_titlebarbuttons{
+			display:flex;
+		}
+
+		.maya_titlebarbuttons button{
+			min-width: 21px;
+			min-height: 21px;
+			margin-left:2px;
+			background-repeat: no-repeat;
+			background-position: 50%;
+			box-shadow: none;
+			background: linear-gradient(180deg,#F9CACF,#D86F95 8%,#DD7C9D 40%,#B72A5C 88%,#B72A5C 93%,#B82C5D 95%,#B82C5D 96%,#B82C5D);
+			transition: background .1s;
+			border: none;
+			padding: 0px;
+			display: block;
+		}
+
+		.maya_titlebarbuttons button[class="maya_min"]{background-image: url("/assets/funkytown_stamps/maya/min.svg");}
+		.maya_titlebarbuttons button[class="maya_max"]{background-image: url("/assets/funkytown_stamps/maya/max.svg");}
+		.maya_titlebarbuttons button[class="maya_close"]{background-image: url("/assets/funkytown_stamps/maya/close.svg");}
+
+		/*Windows*/
+		.maya_content {
+			box-sizing: border-box;
+			text-align: center;
+			background-clip: content-box
+		}
+		.maya_stuff {
+			height: 30px;
+			font-family: "Pixelated MS Sans Serif";
+			background-color: #FDDBE3;
+			border: 3px solid #B82C5D;
+			border-bottom-left-radius: 8px;
+			border-bottom-right-radius: 7px;
+		}
+		
+			/* cristobalcito version */
+			/*Title Bars*/
+			.cris_titlebar{
+				background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#005bff 95%,#003dd7 96%,#003dd7);
+				border-top-left-radius: 8px;
+				border-top-right-radius: 7px;
+				border-top: 1px solid #0831d9;
+				border-left: 1px solid #0831d9;
+				border-right: 1px solid #0831d9;
+				text-shadow: 1px 1px #0f1089;
+				margin-top: 0px;
+				padding: 3px 5px 3px 3px;
+				height: 21px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+
+			.cris_titlebartext{
+				font-family: "Trebuchet MS";
+				width:64px;
+				font-size: 1vw;
+				text-align: left;
+				font-size: 1vh;
+				color: white;
+				text-shadow: 1px 1px #0f1089;
+				padding-left: 3px;
+			}
+
+			.cris_titlebarbuttons{
+				display:flex;
+			}
+
+			.cris_titlebarbuttons button{
+				min-width: 21px;
+				min-height: 21px;
+				margin-left:2px;
+				background-repeat: no-repeat;
+				background-position: 50%;
+				box-shadow: none;
+				background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#005bff 95%,#003dd7 96%,#003dd7);
+				transition: background .1s;
+				border: none;
+				padding: 0px;
+				display: block;
+			}
+
+			.cris_titlebarbuttons button[class="maya_min"]{background-image: url("/assets/funkytown_stamps/maya/min.svg");}
+			.cris_titlebarbuttons button[class="maya_max"]{background-image: url("/assets/funkytown_stamps/maya/max.svg");}
+			.cris_titlebarbuttons button[class="maya_close"]{background-image: url("/assets/funkytown_stamps/maya/close.svg");}
+
+			/*Windows*/
+			.cris_content {
+				box-sizing: border-box;
+				text-align: center;
+				background-clip: content-box
+			}
+			.cris_stuff {
+				height: 30px;
+				font-family: "Pixelated MS Sans Serif";
+				background-color: #ECE9D8;
+				border: 3px solid #0831d9;
+				border-bottom-left-radius: 8px;
+				border-bottom-right-radius: 7px;
+			}

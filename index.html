@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en" style="cursor: url('/assets/cursor.png'), url('/assets/cursor_32.png'), auto;">
+	<head>
+		<title>flines</title>
+		
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=800, height=600, initial-scale=0.1, shrink-to-fit=no" />
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="manifest" href="/assets/site.webmanifest">
+		
+		<!-- CSS & MDB -->
+		<link rel="stylesheet" href="/scripts/mdb.min.css" />
+		<link rel="stylesheet" href="/scripts/style.css">
+		
+		<!-- Social Media Preview -->
+		<meta property="og:title" content="flines Official Home Page">
+		<meta property="og:description" content="Welcome to rafael's web site page!">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://raflines.github.io/assets/preview/preview.png">
+		<meta property="og:url" content="https://raflines.github.io">
+		
+		<!-- Google Fonts for the new site -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+	</head>
+	
+	<body style="
+			background-image: url('/assets/bg.png');
+			background-repeat: repeat;
+			background-attachment: fixed;
+	">
+		<div id="site_canvas" style="
+			position: absolute;
+		
+			width: 800px;
+			height: 920px;
+			
+			left: 0;
+			right: 0;
+			
+			margin: auto;
+			
+			/*background-color: rgba(255, 255, 255, 0.25);*/
+		">
+			<br>
+			<br>
+		<!-- HI! IM FLIZZY! -->
+			<div id="flizzytarget" class="flizzyAppearing" style="
+				position: fixed;
+				right: 5%;
+				bottom: 5%;
+				filter: drop-shadow(0 0 0.50rem #ffffff);
+			">
+				<div style="
+					background-color: #FFFFCB;
+					width: 218px; 
+					height: 120px;
+					
+					padding-top: 15px;
+					padding-left: 8px;
+					padding-right: 8px;
+					
+					border-radius: 8px;
+					border: 2px solid black;
+					
+					margin-bottom: 25px;
+					margin-right: 50px;
+				">
+					<a style="color: #000000; font-family: 'Pixelated MS Sans Serif';">Hi! I am Flizumi, your web assistant. Would you like to save your <u>web cookies</u> now?</a>
+					<br>
+					<br>
+					<button class="flizzy_button"  onclick="flizzy_YesOrYes()" style="float: left;"><a style="color: #000000; font-family: 'Pixelated MS Sans Serif'; font-size: 16px;">Yes</a></button>
+					<button class="flizzy_button" onclick="flizzy_Disappear()" style="float: right;"><a style="color: #000000; font-family: 'Pixelated MS Sans Serif'; font-size: 16px;">No</a></button>
+
+					<svg width="20" height="30" style="position: absolute; bottom: 275px;">
+						<polygon points="18,1 18,30 1, 1" style="fill:#FFFFCB; stroke-width:2; stroke: black;"/>
+						<rect width="300" height="5" style="fill:#FFFFCB;"/>
+					</svg>
+				</div>
+				
+				<img id="FlizzyTargetImage" src="/assets/flizumi_assistant/flizumi.png" style="margin-left: 50px;"/>
+			</div>
+		
+			<!-- WEBSITE -->
+			<center>
+				<div style="
+					overflow: hidden;
+					position: relative;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					align-items: flex-start;
+					width: 100%;
+					justify-content: space-around;
+				">
+					<marquee behavior="scroll" direction="right" onmouseover="this.stop();" onmouseout="this.start();">
+					
+						<!-- last stamp -->
+						<img class="stamps" src="/assets/funkytown_stamps/flines/star.png"/>
+						
+						<!-- legacy stamp -->
+						<a href="/legacy/index.html"><img class="stamps" src="/assets/funkytown_stamps/flines/legacy.png"/></a>
+						
+						<!-- okaymantoad stamp -->
+						<a href="https://www.twitch.tv/okaymancharles"><img class="stamps" src="/assets/funkytown_stamps/okaymanstamp/okaymantoad.png"/></a>
+					
+						<!-- cris's stamp -->
+						<div style="display: inline-block; margin-right: 10px; vertical-align: top;">
+							<div class="maya_content" style="width: 200px;">
+								<div class="cris_titlebar">
+									<div class="cris_titlebartext"><h1>WanWan says!:</h1></div>
+									<div class="cris_titlebarbuttons">
+										<button class="maya_close"></button>
+									</div>
+								</div>
+								<div class="cris_stuff">
+									<div style="height: 4px;"> </div>
+									<img src="/assets/funkytown_stamps/various/wanwan.png" style="float: left; margin-left: 5px;"/>
+									<a style="color: black; font-family: 'Pixelated MS Sans Serif'; vertical-align: top; margin-left:8px; margin-right: 3px; float: left;">Fuck  you</a>
+									<button class="maya_button" style="vertical-align: top; float: right; margin-right: 5px;">OK</button>
+								</div>
+							</div>
+						</div>
+					
+						<!-- various stamps -->
+						<img class="stamps" src="/assets/funkytown_stamps/various/ceasar.png"/>
+
+						<a href="https://craity.itch.io"><img class="stamps" src="/assets/funkytown_stamps/various/craity.png"/></a>
+						<a href="https://farawaydrip30.itch.io/battlements"><img class="stamps" src="/assets/funkytown_stamps/ratman/battlements.png"/></a>
+						<a href="https://gamejolt.com/@thetacoman_"><img class="stamps" src="/assets/funkytown_stamps/various/tacoman.png"/></a>
+					
+						<!-- maya's stamp -->
+						<div style="display: inline-block; margin-right: 10px; vertical-align: top;">
+							<div class="maya_content" style="width: 256px;">
+								<div class="maya_titlebar">
+									<div class="maya_titlebartext"><h1>maya ♡</h1></div>
+									<div class="maya_titlebarbuttons">
+										<a href="https://badagoo.github.io/pinnysite/?balls=true"><button class="maya_close"></button></a>
+									</div>
+								</div>
+								<div class="maya_stuff">
+									<div style="height: 4px;"> </div>
+									<a style="color: #D53F74; font-family: 'Pixelated MS Sans Serif';" href="https://badagoo.github.io/pinnysite/?flines=true">omg omg haiii :33 ♡ ^-^</a>
+								</div>
+							</div>
+						</div>
+						
+						<!-- various stamp -->
+						<a href="https://farawaydrip30.github.io/Pages/bongandmarriagecounselling/BongsAndMarriageCounselling.html"><img class="stamps" src="/assets/funkytown_stamps/various/faraway.png"/></a>
+						
+						<!-- ratman's stamp -->
+						<a href="https://ratmanteam.github.io/index.html"><img class="stamps" src="/assets/funkytown_stamps/ratman/ratman.png"/></a>
+						
+						<!-- first stamp -->
+						<img class="stamps" src="/assets/funkytown_stamps/flines/star.png"/>
+
+					</marquee>
+			</div>
+		
+			<!-- LOGO -->
+				<br>
+				<table border="0" cellpadding="0" cellspacing="0" width="400" height="95">
+					<tbody>
+						<td height="5">
+							<!-- flines -->
+						</td>
+						<tr>
+						<td>
+							<center>
+								<img src="assets/home_page/logo.png"/>
+							</center>
+						</td>
+						<tr height="5">
+						<td>
+							<img src="assets/home_page/flizumi.png" width="200" height="200" align="right" style="filter: drop-shadow(0 0 0.50rem #ffffff);"/>
+							
+							<div style="
+								width: 215px;
+								overflow-wrap: break-word;
+							">
+								<b><font face="Times New Roman" size="4" style="color: white;">
+								<br>
+								hello im flines and welcome to the little corner of the web dedicated to my silly projects! ✶
+								</font></b>
+							</div>
+						</td>
+					</tbody>
+				</table>
+				
+				<br>
+				<br>
+				<b><font face="Times New Roman" size="3" style="color: white;">
+				▼ my projects !! ▼
+				</font></b>
+				<div style="width: 750px; height: 500px;">
+					<div class='circle-container'>
+						<a class='center'><img src='/assets/projects/snowball_sun.png'></a>
+						<a class='deg300'><img alt="(PLACEHOLDER!)" src='/assets/projects/placeholder.png'></a>
+						<a href='https://www.youtube.com/watch?v=84h1hGctXz0' class='deg330'><img alt="THE FLINTASTIC MOVIE (YOUTUBE MOVIE)" src='/assets/projects/movie.png'></a>
+						<a href='/files/CountryMaker2.5.exe' class='deg270'><img alt="Country Maker (GAME)" src='/assets/projects/countrymaker.png'></a>
+						<a href='/files/swap_202002h.exe' class='deg240'><img alt="SWAP 2.0 (GAME)" src='/assets/projects/swap.png'></a>
+						<a href='https://play.google.com/store/apps/details?id=com.prisma.flines' class='deg210'><img alt="SWAP Android (GAME)" src='/assets/projects/swap_android.png'></a>
+						<a href='https://play.google.com/store/apps/details?id=com.prisma.flines2' class='deg180'><img alt="RUN: Não pare de correr! (GAME)" src='/assets/projects/run.png'></a>
+						<a href='https://twitter.com/ratmanteam' class='deg150'><img alt="Toyventure (GAME)" src='/assets/projects/toyventure.png'></a>
+						<a href='/files/flin_4_23012022.exe' class='deg120'><img alt="Flin's Magic Pizzeria (EXPERIMENT)" src='/assets/projects/flinmagicpizzeria.png'></a>
+						<a class='deg90'><img alt="Lab Cat Mania (CANCELLED GAME)" src='/assets/projects/labcatmania.png'></a>
+						<a href='https://flines.itch.io/flin-and-the-wsps' class='deg60'><img alt="FLIN!! and the Watching Someone Pee Simulator (GAME)"src='/assets/projects/flinner.png'></a>
+						<a href='https://flines.itch.io/flintastic-experiences' class='deg30'><img alt="FLINTASTIC ADVENTURES: CEASAR GENERATION (GAME)" src='/assets/projects/gremlins.png'></a>
+						<a href='https://www.youtube.com/watch?v=xqh7D772q7A&list=PLHnJj7xs44v7sdLbyMJnpdRLRdGZ3C8Wz&pp=gAQBiAQB' class='deg0'><img alt="FLINTASTIC ADVENTURES (YOUTUBE SERIES)" src='/assets/projects/flintastic.png'></a>
+					</div>
+				</div>
+				
+				<b><font face="Times New Roman" size="3" style="color: white;">
+				▼ my social media !! ▼
+				</font></b>
+				<table width="750" height="50" style="text-align: center;">
+					<tr height="4">
+					<td>
+						<button class="maya_button socials" onclick="https://flines.itch.io/';">Itch.io</button>
+					</td>
+					
+					<td>
+						<button class="maya_button socials" onclick="location.href='https://github.com/raflines';">GitHub</button>
+					</td>
+					
+					<td>
+						<button class="maya_button socials" onclick="location.href='https://youtube.com/flines';">Youtube</button>
+					</td>
+					
+					<td>
+						<button class="maya_button socials" onclick="location.href='https://open.spotify.com/user/fl1nns';">Spotify</button>
+					</td>
+				</table>
+
+				<br>
+				<b><font face="Times New Roman" size="3" style="color: white;">
+				✰ made by flines ✰
+				</font></b>
+				
+				<br>
+				<a><i class="flag flag-us"></i></a>
+				<a><i class="flag flag-br"></i></a>
+				
+				<br>
+				<br>
+				<img src="assets/home_page/tv_flizumi.png" style="filter: drop-shadow(0 0 0.50rem #ffffff); width: 35%; height: 35%;"/>
+				<br>
+				
+				<br>
+			</center>
+		</div>
+		
+		<!-- Javascript -->
+		<script type="text/javascript" src="/scripts/script.js"></script>
+	</body>
+</html>

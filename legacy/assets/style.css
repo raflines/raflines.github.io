@@ -1,0 +1,126 @@
+/* Top Bar */
+	.topBar {
+		display: inline;
+	}
+
+	.topBarLogo {
+		position: relative;
+		margin-right: 10px;
+		padding-right: 5px;
+		border-right: 1px solid black;
+	}
+
+/* Home Page Boxes */
+	.homeBoxes {
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+/* Left Section */
+	.redSection {
+		width: 175px;
+		float: left;
+		margin-right: 25px;
+		text-align: left;
+		overflow-wrap: break-word;
+	}
+
+	.gameList {
+		margin-bottom: 15px;
+	}
+	
+	.theBox {
+		margin-top: 2px;
+	}
+	
+	.theBox:hover {
+		content: url("the_box_open.png");
+	}
+	
+/* Middle Section */
+	.orangeSection {
+		width: 250px;
+		float: left;
+		margin-right: 25px;
+		text-align: center;
+	}
+	
+	.albumSection {
+		display: grid;
+		grid-template-columns: auto auto;
+		column-gap: 7px;
+	}
+
+
+/* Right Section */
+	.yellowSection {
+		width: 175px;
+		float: left;
+		margin-right: 25px;
+		text-align: center;
+		overflow-wrap: break-word;
+	}
+	
+	.socialList {
+		margin-bottom: 15px;
+	}
+	
+	.newsSection {
+		
+	}
+	
+	.newsSectionTitle {
+		text-align: center;
+		font-weight: bold;
+		font-size: 15px;
+	}
+	
+	.newsSectionDescription {
+		text-align: left;
+		align: left;
+		font-size: 12px;
+	}
+	
+	.readMore {
+		color: blue;
+		font-decoration: none underline;
+		font-weight: bold;
+		font-size: 10px;
+	}
+	
+	.readMoreAll {
+		color: blue;
+		font-decoration: none underline;
+		font-weight: bold;
+		font-size: 18px;
+	}
+
+/* General */
+	.links {
+		color: blue;
+		text-decoration: none underline;
+		font-weight: bold;
+	}
+	
+	.buttonGeneric {
+		background-color: white;
+		color: black;
+		border: 2px solid black;
+		padding: 3px;
+		position: relative;
+	}
+	
+	.languageSection {
+		float: center;
+		text-align: center;
+	}
+	
+	.copyright {
+		float: center;
+	}
+	
+	.audioPlayer {
+		margin-top: 5px;
+		width: 250px;
+	}
