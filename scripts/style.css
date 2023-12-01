@@ -1,3 +1,7 @@
+	*:hover {
+		cursor: url('/assets/cursor.png'), url('/assets/cursor_32.png'), auto;
+	}
+
 	a {
 		color: white;
 		font-weight: bold;

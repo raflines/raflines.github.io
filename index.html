@@ -34,7 +34,22 @@
 			background-image: url('/assets/bg.png');
 			background-repeat: repeat;
 			background-attachment: fixed;
+			
+			margin: 0px;
 	">
+	<!-- christmas frame -->
+		<div id="ChristmasFrameDiv" style="
+			position: fixed;
+			filter: drop-shadow(0 0 0.50rem #eeeeee);
+			
+			width: 100%;
+			height: 100%;
+			
+			vertical-align: middle;
+		">
+			<img id="ChristmasFrame" src="/christmas/assets/frame.png"/>
+		</div>
+	
 		<div id="site_canvas" style="
 			position: absolute;
 		
@@ -50,6 +65,41 @@
 		">
 			<br>
 			<br>
+		<!-- happy christmas flizzy! -->
+			<div id="flizantatarget" class="flizzyAppearing" style="
+				position: fixed;
+				left: 2%;
+				bottom: 1%;
+				filter: drop-shadow(0 0 0.50rem #ffffff);
+			">
+				<div style="
+					background-color: #FFFFCB;
+					width: 205px; 
+					height: 90px;
+					
+					padding-top: 15px;
+					padding-left: 8px;
+					padding-right: 8px;
+					
+					border-radius: 8px;
+					border: 2px solid black;
+					
+					margin-bottom: 25px;
+					margin-right: 50px;
+				">
+					<a style="color: #000000; font-family: 'Pixelated MS Sans Serif';">Ho! Ho! Ho! Christmas is here! Are you ready?</a>
+					<br>
+					<button class="flizzy_button" onclick="location.href='/christmas/'" style="margin-top: 5px; margin-left: 63px;"><a style="color: #000000; font-family: 'Pixelated MS Sans Serif'; font-size: 16px;">YES!! :3</a></button>
+					<br>
+					<svg width="20" height="30" style="position: absolute; bottom: 254px; left: 108px;">
+						<polygon points="18,1 18,30 1, 1" style="fill:#FFFFCB; stroke-width:2; stroke: black;"/>
+						<rect width="300" height="5" style="fill:#FFFFCB;"/>
+					</svg>
+				</div>
+				
+				<img id="FlizantaTargetImage" src="/christmas/assets/santa_harines/santa_harines_home.png" style="margin-left: 50px; width: 50%; height: 50%;"/>
+			</div>
+			
 		<!-- HI! IM FLIZZY! -->
 			<div id="flizzytarget" class="flizzyAppearing" style="
 				position: fixed;
@@ -72,7 +122,7 @@
 					margin-bottom: 25px;
 					margin-right: 50px;
 				">
-					<a style="color: #000000; font-family: 'Pixelated MS Sans Serif';">Hi! I am Flizumi, your web assistant. Would you like to save your <u>web cookies</u> now?</a>
+					<a style="color: #000000; font-family: 'Pixelated MS Sans Serif';">Hi! I am Flizumi Harines, your web assistant. Would you like to save your <u>web cookies</u> now?</a>
 					<br>
 					<br>
 					<button class="flizzy_button"  onclick="flizzy_YesOrYes()" style="float: left;"><a style="color: #000000; font-family: 'Pixelated MS Sans Serif'; font-size: 16px;">Yes</a></button>
@@ -156,6 +206,9 @@
 						
 						<!-- ratman's stamp -->
 						<a href="https://ratmanteam.github.io/index.html"><img class="stamps" src="/assets/funkytown_stamps/ratman/ratman.png"/></a>
+						
+						<!-- INTO THE STAMP -->
+						<a><img class="stamps" src="/assets/funkytown_stamps/various/intothedark.gif"/></a>
 						
 						<!-- first stamp -->
 						<img class="stamps" src="/assets/funkytown_stamps/flines/star.png"/>
