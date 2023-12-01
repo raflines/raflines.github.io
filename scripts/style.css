@@ -32,8 +32,22 @@
 		bottom: 0;
 	}
 	
+	.flizzy_button_xmas {
+		color: #E71A22;
+		background-color: #1AA327;
+		border-radius: 4px;
+		border: 2px solid #E71A22;
+		width: 80px;
+		height: 35px;
+		bottom: 0;
+	}
+	
 	.flizzy_button:hover {
 		background-color: #F2F2C1;
+	}
+	
+	.flizzy_button_xmas:hover {
+		background-color: #1A8827;
 	}
 	
 	.flizzyAppearing {
