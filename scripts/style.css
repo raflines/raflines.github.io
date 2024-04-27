@@ -29,7 +29,6 @@
 		border: 2px solid #DDD9BA;
 		width: 80px;
 		height: 35px;
-		bottom: 0;
 	}
 	
 	.flizzy_button:hover {
@@ -250,7 +249,7 @@
 
 			.cris_titlebartext{
 				font-family: "Trebuchet MS";
-				width:64px;
+				width:80px;
 				font-size: 1vw;
 				text-align: left;
 				font-size: 1vh;
