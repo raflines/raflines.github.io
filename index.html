@@ -35,6 +35,7 @@
 			background-repeat: repeat;
 			background-attachment: fixed;
 
+			height: 100%;
 			margin: 0px;
 	">
 	<!-- christmas frame
@@ -52,14 +53,13 @@
 	-->
 	
 		<div id="site_canvas" style="
-			width: 800px;
-			height: 920px;
+			width: 48%;
+			height: 100%;
 			
-			left: 0;
-			right: 0;
-			bottom: 50%;
-			
-			margin: auto;
+			position: fixed;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
 			
 			/*background-color: rgba(255, 255, 255, 0.25);*/
 		">
@@ -102,7 +102,7 @@
 			<!-- WEBSITE -->
 			<center>
 			<!-- LOGO -->
-				<table border="0" cellpadding="0" cellspacing="0" width="400" height="95" style="margin-top: 32px;">
+				<table border="0" cellpadding="0" cellspacing="0" width="400" height="95">
 					<tbody>
 						<td height="5">
 							<!-- flines -->
@@ -110,15 +110,15 @@
 						<tr>
 						<td>
 							<center>
-								<img src="assets/home_page/logo.png"/>
+								<img src="assets/home_page/logo.png" style="width: 80%;"/>
 							</center>
 						</td>
 						<tr height="6">
 						<td>
-							<img src="assets/home_page/flizumi.png" width="200" height="200" align="right" style="filter: drop-shadow(0 0 0.50rem #ffffff);"/>
+							<img src="assets/home_page/flizumi.png" width="40%" height="40%" align="right" style="filter: drop-shadow(0 0 0.50rem #ffffff);"/>
 							
 							<div style="
-								width: 215px;
+								width: 54%;
 								overflow-wrap: break-word;
 								margin-top: 24px;
 							">
@@ -130,11 +130,11 @@
 					</tbody>
 				</table>
 				
-				<hr class="solid" style="width: 250px; color: white; margin-top: 32px; margin-bottom: 32px;">
+				<hr class="solid" style="width: 31.25%; color: white; margin-top: 32px; margin-bottom: 32px;">
 				
 				<!-- PROJECTS -->
 				<div id="projects" style="float: center; position: relative;">
-					<div id="game_projects" style="width: 400px; height: 280px; float: left;">
+					<div id="game_projects" style="width: 50%; height: 108%; float: left;">
 						<b><font face="Times New Roman" size="3" style="color: white;">
 						▼ my games !! ▼
 						</font></b>
@@ -146,9 +146,9 @@
 						</div>
 					</div>
 					
-					<div id="flintastic_projects" style="width: 400px; height: 280px; float: right;">
-						<div style="margin-bottom: 42px;">
-							<iframe width="214" height="157" src="https://www.youtube.com/embed/84h1hGctXz0?si=2N8ewHNWgcWT4VSH" title="A FLINTASTIC MOVIE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-top: 40px;"></iframe>
+					<div id="flintastic_projects" style="width: 50%; height: 108%; float: right;">
+						<div style="margin-bottom: 50px;">
+							<iframe width="53.5%" height="39.25%" src="https://www.youtube.com/embed/84h1hGctXz0?si=2N8ewHNWgcWT4VSH" title="A FLINTASTIC MOVIE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="margin-top: 40px;"></iframe>
 							<img src='/assets/tv.png' style="position: absolute; right: 0; top: 0; pointer-events: none;"/>
 						</div>
 						
@@ -197,12 +197,12 @@
 				</div>
 				
 				<!-- SOCIALS -->
-				<div id="socials" style="float: left; width: 400px; margin-bottom: 32px;">
+				<div id="socials" style="float: left; width: 50%; margin-bottom: 32px;">
 					<b><font face="Times New Roman" size="3" style="color: white;">
 					▼ my socials !! ▼
 					</font></b>
 					
-					<div id="socials" align="center" style="width: 350px; margin-top: 16px;">
+					<div id="socials" align="center" style="width: 87.5%; margin-top: 16px;">
 							<a href="https://flines.itch.io/" style="color: #eeeeee; font-family: 'Pixelated MS Sans Serif'; margin-left: 2px;">itch.io</a>
 							
 							<a href="https://github.com/raflines" style="color: #eeeeee; font-family: 'Pixelated MS Sans Serif'; font-size: 14px; margin-left: 2px;">github</a>
@@ -211,7 +211,7 @@
 					</div>
 				</div>
 				
-				<hr class="solid" style="width: 500px; color: white; margin-top: 32px; margin-bottom: 32px;">
+				<hr class="solid" style="width: 62.5%; color: white; margin-top: 32px; margin-bottom: 32px;">
 				
 				<!-- STAMPS -->
 					<div style="
@@ -289,7 +289,7 @@
 						<img class="stamps" src="/assets/funkytown_stamps/flines/star.png" style="margin-left: 1%;"/>
 				</div>
 				
-				<hr class="solid" style="width: 500px; color: white; margin-top: 32px; margin-bottom: 32px;">
+				<hr class="solid" style="width: 62.5%; color: white; margin-top: 32px; margin-bottom: 32px;">
 				
 				<b><font face="Times New Roman" size="3" style="color: white;">
 				✰ made by flines ✰<br>
@@ -300,12 +300,14 @@
 				
 				<!-- <img src="assets/home_page/tv_flizumi.png" style="filter: drop-shadow(0 0 0.50rem #ffffff); width: 35%; height: 35%;"/> -->
 			</center>
-			
+		</div> <!-- end of site canvas -->
+		
 		<!-- HI! IM FLIZZY! -->
 			<div id="flizzytarget" class="flizzyAppearing" style="
 				position: fixed;
 				right: 5%;
 				bottom: 5%;
+				
 				filter: drop-shadow(0 0 0.50rem #ffffff);
 			">
 				<div style="
@@ -338,7 +340,6 @@
 				
 				<img id="FlizzyTargetImage" src="/assets/flizumi_assistant/flizumi.png" style="width: 50%; height: 50%; margin-left: 70%;"/>
 			</div>
-		</div>
 		
 		<!-- Javascript -->
 		<script type="text/javascript" src="/scripts/script.js"></script>
