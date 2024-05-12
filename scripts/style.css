@@ -23,6 +23,16 @@
 		height: 32px;
 	}
 	
+	.projects_game {
+		max-width: 22%;
+		padding: 12px;
+		filter: drop-shadow(0 0 0.60rem #ffffff);
+	}
+	
+	.projects_game:hover {
+		filter: drop-shadow(0 0 1.25rem #ffffff);
+	}
+	
 	.flizzy_button {
 		background-color: #FFFFCB;
 		border-radius: 4px;
