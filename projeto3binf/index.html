@@ -3,13 +3,12 @@
 	<head>
 		<title>PROJETO 3BINF - COLEGIO PRIMEIRO DE MAIO</title>
 		
-		<!-- Favicon
+		<!-- Favicon -->
 		<link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-		<link rel="manifest" href="/assets/site.webmanifest">
-		-->
+		<!-- <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png"> -->
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/CPM_LOGO.png">
+		<!-- <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="manifest" href="/assets/site.webmanifest"> -->
 		
 		<!-- CSS -->
 		<link rel="stylesheet" href="/scripts/style.css">
@@ -36,55 +35,58 @@
 		
 		<!-- Others -->
 		<meta charset="UTF-8"/>
-		<meta name="keywords" content="flines, raflines, flines hedgehog, raflines hedgehog, flines raflines, raflines flines, raflines flines hedgehog, flines raflines hedgehog, raflines.github.io, flines.github.io, rafline, fline, rafline.github.io, fline.github.io, raflines.github, rafline.github, flines.github, fline.github, raflines github, flines github, raflines flines github, flines raflines github">
-		<meta name="viewport" content="width=800, height=device-height, initial-scale=0.5, shrink-to-fit=no, minimum-scale=0.5" />
+		<meta name="keywords" content="">
+		<meta name="viewport" content="initial-scale=1.0, height=device-height, width=device-width"/>
+
 		
 		<!-- Google Fonts for the new site -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 	</head>
 	
-	<body style="
-			background-image: url('/assets/bg.png');
-			background-repeat: repeat;
-			background-attachment: fixed;
-			background-color: black;
-
-			height: 100vh;
-			margin: 0px;
-			
-			min-height: 100vh;
-			min-height: -webkit-fill-available;
-	">
-		<div id="site_canvas" style="
-			width: 100%;
-			height: 100%;
-			
-			margin: auto;
-			margin-top: 2%;
-			
-			/*background-color: rgba(255, 255, 255, 0.25);*/
-		">
-			<!-- CORPO DO SITE -->
-			<center>
-			<!-- INFORMACAO -->
-			<div style="
-				width: 54%;
-				overflow-wrap: break-word;
-				margin-top: 24px;
-			">
-				<b><font face="Times New Roman" size="4" style="color: white;">
-					PROJETO 3 BINF<br>✶ PROTOTIPO <font face="Times New Roman" size="4" style="color: #7b16b5;">ROXO</font> <font face="Times New Roman" size="4" style="color: #1cb3ff;">AZUL</font> ✶
+	<body> <!-- CORPO DO SITE -->
+		<center>
+		<div class="mainJogo"> <!-- Jogo -->
+			<div class="headerFooter"> <!-- Header -->
+				<b><font size="2" style="color: #005208;">
+					Bem-vindo à...<br>
+					<font size="7">GREENHOUSE</font>
 				</font></b>
-				
-				<hr class="solid" style="width: 31.25%; color: white; margin-top: 22px; margin-bottom: 32px;">
+
+				<hr style="width: 50%; margin-bottom: 22px; border: 1px solid #005208;">
 			</div>
-			
-			<canvas id="canvasJogo" style="width: 70%; height: 40%; border: 2px solid #FFFFFF; background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDbWUJDVcUK290oUDOigq09s95PJVB0Fw8qw&s'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-				Se você está vendo isso, seu navegador provavelmente não suporta a tag Canvas.
-			</canvas>
-		<!-- JAVASCRIPT -->
-		<script type="text/javascript" src="https://raflines.github.io/projeto3binf/scripts/script.js"></script>
+		
+				<div id="telaJogo">
+					<img id="fundoJogo" class="jogoFundo disableSelect" usemap="#telaTitulo" src="/assets/titulo.png"/>
+				</div>
+				
+				<map id="telaTitulo">
+					<area shape="rect" coords="0,0,1000,650" alt="Começar" onclick="mudarTela('#mapaCozinha')">
+				</map>
+				
+				<map id="mapaCozinha">
+					<area shape="rect" coords="0,0,1000,50" alt="Geladeira" onclick="objetoClicado(0)">
+					<area shape="rect" coords="0,51,1000,100" alt="Microondas" onclick="objetoClicado(1)">
+					<area shape="rect" coords="0,101,1000,150" alt="Fogão" onclick="objetoClicado(2)">
+					<area shape="rect" coords="0,151,1000,200" alt="Coifa" onclick="objetoClicado(3)">
+					<area shape="rect" coords="0,201,1000,250" alt="Lava-louças" onclick="objetoClicado(4)">
+				</map>
+				
+				<map id="telaFinal">
+					<area shape="rect" coords="0,0,1000,650" alt="Começar" onclick="mudarTela('#telaTitulo')">
+				</map>
+		
+			<div class="headerFooter" style="margin-bottom: 22px;"> <!-- Footer -->
+				<hr style="width: 50%; margin-bottom: 22px; border: 1px solid #005208;">
+				<b><font size="4">
+					<font size="2">"GREENHOUSE" DO GRUPO 1 DA TURMA 3BINF.<br>COLÉGIO PRIMEIRO DE MAIO.<br><img src="/assets/CPM_LOGO.png" style="width: 3.5%; margin-top: 6px;"></font>
+				</font></b>
+			</div>
+		</div>
+		</center>
+		
+	<!-- JAVASCRIPT -->
+	<script type="text/javascript" src="/scripts/script.js"></script>
 	</body>
 </html>
