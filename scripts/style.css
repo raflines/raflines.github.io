@@ -106,6 +106,41 @@
 	  }
 	}
 	
+	.site_canvas {
+		position: absolute;
+		z-index: 0;
+			
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	
+	/* PHONE ORIENTATION */
+	@media screen and (orientation: landscape) {
+		.site_canvas {
+			position: absolute;
+			z-index: 0;
+			
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	@media screen and (orientation: portrait) {
+		.site_canvas {
+			width: 100%;
+			
+			position: absolute;
+			z-index: 0;
+			
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+	
+	
 	/* CODE I STOLE FROM ANA IN STACKOVERFLOW !! */
 	 .circle-container {
         position: relative;
