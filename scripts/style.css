@@ -70,8 +70,14 @@
 		height: 32px;
 	}
 	
+	.flin {
+		margin: auto;
+		padding: auto;
+	}
+	
 	.projects_game {
 		max-width: 22%;
+		width: 22%;
 		padding: 12px;
 		filter: drop-shadow(0 0 0.60rem #ffffff);
 	}
@@ -168,41 +174,36 @@
 	/* CODE I STOLE FROM ANA IN STACKOVERFLOW !! */
 	 .circle-container {
         position: relative;
-        width: 384px;
-        height: 384px;
-        padding: 44.8px;
         /*2.8em = 2em*1.4 (2em = half the width of a link with img, 1.4 = sqrt(2))*/
         border: dashed 1px;
         border-radius: 50%;
-        margin: 28px auto 0;
     }
     .circle-container a {
         display: block;
         position: absolute;
-        width: 96px; height: 96px;
-        margin: -32px;
-		top: 200px;
-		left: 220px;
+		
+		left: 50%;
+		transform: translateX(-50%);
     }
-    .circle-container img { display: block; width: 100%; }
+    .circle-container img { display: block; width: 60%; }
 	.center:hover { filter: drop-shadow(0 0 0.50rem #DE4B00); }
     .circle-container img:hover { filter: drop-shadow(0 0 0.50rem #ffffff); }
-    .deg0 { transform: translate(12em); } /* 12em = half the width of the wrapper */
-    .deg30 { transform: rotate(30deg) translate(12em) rotate(-30deg); }
-    .deg60 { transform: rotate(60deg) translate(12em) rotate(-60deg); }
-    .deg90 { transform: rotate(90deg) translate(12em) rotate(-90deg); }
-    .deg120 { transform: rotate(120deg) translate(12em) rotate(-120deg); }
-    .deg150 { transform: rotate(150deg) translate(12em) rotate(-150deg); }
-    .deg180 { transform: translate(-12em); }
-    .deg210 { transform: rotate(210deg) translate(12em) rotate(-210deg); }
-    .deg240 { transform: rotate(240deg) translate(12em) rotate(-240deg); }
-    .deg270 { transform: rotate(270deg) translate(12em) rotate(-270deg); }
-    .deg300 { transform: rotate(300deg) translate(12em) rotate(-300deg); }
-    .deg330 { transform: rotate(330deg) translate(12em) rotate(-330deg); }
+    .deg0 { transform: translate(7em); } /* 12em = half the width of the wrapper */
+    .deg30 { transform: rotate(30deg) translate(7em) rotate(-30deg); }
+    .deg60 { transform: rotate(60deg) translate(7em) rotate(-60deg); }
+    .deg90 { transform: rotate(90deg) translate(7em) rotate(-90deg); }
+    .deg120 { transform: rotate(120deg) translate(7em) rotate(-120deg); }
+    .deg150 { transform: rotate(150deg) translate(7em) rotate(-150deg); }
+    .deg180 { transform: translate(-7em); }
+    .deg210 { transform: rotate(210deg) translate(7em) rotate(-210deg); }
+    .deg240 { transform: rotate(240deg) translate(7em) rotate(-240deg); }
+    .deg270 { transform: rotate(270deg) translate(7em) rotate(-270deg); }
+    .deg300 { transform: rotate(300deg) translate(7em) rotate(-300deg); }
+    .deg330 { transform: rotate(330deg) translate(7em) rotate(-330deg); }
 	
 	
 	/* CODE I STOLE FROM MYSTIC MAYA WITH HER PERMISSION!!!!!!!! I LOVE YOU!!!!!!!! */
-		@font-face {font-family: "Pixelated MS Sans Serif";src: url(/assets/funkytown_stamps/maya/ms_sans_serif.woff2);}
+		@font-face {font-family: "Pixelated MS Sans Serif";src: url(/assets/buttons/maya/ms_sans_serif.woff2);}
 		.maya_title{
 			width: 64px;
 			height: 50px;
@@ -293,9 +294,9 @@
 			display: block;
 		}
 
-		.maya_titlebarbuttons button[class="maya_min"]{background-image: url("/assets/funkytown_stamps/maya/min.svg");}
-		.maya_titlebarbuttons button[class="maya_max"]{background-image: url("/assets/funkytown_stamps/maya/max.svg");}
-		.maya_titlebarbuttons button[class="maya_close"]{background-image: url("/assets/funkytown_stamps/maya/close.svg");}
+		.maya_titlebarbuttons button[class="maya_min"]{background-image: url("/assets/buttons/maya/min.svg");}
+		.maya_titlebarbuttons button[class="maya_max"]{background-image: url("/assets/buttons/maya/max.svg");}
+		.maya_titlebarbuttons button[class="maya_close"]{background-image: url("/assets/buttons/maya/close.svg");}
 
 		/*Windows*/
 		.maya_content {
@@ -311,69 +312,3 @@
 			border-bottom-left-radius: 8px;
 			border-bottom-right-radius: 7px;
 		}
-		
-			/* cristobalcito version */
-			/*Title Bars*/
-			.cris_titlebar{
-				background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#005bff 95%,#003dd7 96%,#003dd7);
-				border-top-left-radius: 8px;
-				border-top-right-radius: 7px;
-				border-top: 1px solid #0831d9;
-				border-left: 1px solid #0831d9;
-				border-right: 1px solid #0831d9;
-				text-shadow: 1px 1px #0f1089;
-				margin-top: 0px;
-				padding: 3px 5px 3px 3px;
-				height: 21px;
-				display: flex;
-				align-items: center;
-				justify-content: space-between;
-			}
-
-			.cris_titlebartext{
-				font-family: "Trebuchet MS";
-				width:80px;
-				font-size: 1vw;
-				text-align: left;
-				font-size: 1vh;
-				color: white;
-				text-shadow: 1px 1px #0f1089;
-				padding-left: 3px;
-			}
-
-			.cris_titlebarbuttons{
-				display:flex;
-			}
-
-			.cris_titlebarbuttons button{
-				min-width: 21px;
-				min-height: 21px;
-				margin-left:2px;
-				background-repeat: no-repeat;
-				background-position: 50%;
-				box-shadow: none;
-				background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#005bff 95%,#003dd7 96%,#003dd7);
-				transition: background .1s;
-				border: none;
-				padding: 0px;
-				display: block;
-			}
-
-			.cris_titlebarbuttons button[class="maya_min"]{background-image: url("/assets/funkytown_stamps/maya/min.svg");}
-			.cris_titlebarbuttons button[class="maya_max"]{background-image: url("/assets/funkytown_stamps/maya/max.svg");}
-			.cris_titlebarbuttons button[class="maya_close"]{background-image: url("/assets/funkytown_stamps/maya/close.svg");}
-
-			/*Windows*/
-			.cris_content {
-				box-sizing: border-box;
-				text-align: center;
-				background-clip: content-box
-			}
-			.cris_stuff {
-				height: 30px;
-				font-family: "Pixelated MS Sans Serif";
-				background-color: #ECE9D8;
-				border: 3px solid #0831d9;
-				border-bottom-left-radius: 8px;
-				border-bottom-right-radius: 7px;
-			}
