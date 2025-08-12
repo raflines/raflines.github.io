@@ -76,14 +76,14 @@
 	}
 	
 	.projects_game {
-		max-width: 22%;
-		width: 22%;
+		max-width: 20%;
+		width: 20%;
 		padding: 12px;
-		filter: drop-shadow(0 0 0.60rem #ffffff);
+		
 	}
 	
 	.projects_game:hover {
-		filter: drop-shadow(0 0 1.25rem #ffffff);
+		filter: drop-shadow(0 0 0.60rem #ffffff);
 	}
 	
 	.flizzy_button {
