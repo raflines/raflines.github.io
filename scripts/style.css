@@ -21,13 +21,17 @@
 		min-height: 100vh;
 		min-height: -webkit-fill-available;
 		
-		background-size: 6%;
+		background-size: 8% auto;
 		animation: starry_night 100s linear infinite;
 		
 		display: flex;
 		display: -ms-flexbox;
 		align-items: flex-start;
 		justify-content: safe center;
+	}
+	
+	.tv_div {
+		pointer-events: none;
 	}
 	
 	.site_canvas {
@@ -58,6 +62,68 @@
 		text-shadow: 2px 2px #000000;
 	}
 	
+	.album_img {
+		margin: 0;
+		margin-top: 16px;
+		width: 95px;
+		height: 95px;
+		float: center;
+		border: 2px solid #FFFFFF;
+	}
+	
+	.the_tv {
+		background: url('/assets/tv_og.png');
+		background-repeat: none;
+		background-position: center;
+		pointer-events: none;
+		width: 400px;
+		height: 250px;
+		position: absolute;
+		top: 62px;
+	}
+	
+	.ltp_tv {
+		background: url('/lesstrainsplease/tv.png');
+		background-repeat: none;
+		background-position: center;
+		pointer-events: none;
+		width: 237px;
+		height: 197px;
+		position: absolute;
+	}
+	
+	.nav_btn:hover {
+		filter: drop-shadow(0 0 0.60rem #ffffff);
+	}
+	
+	.blue_btn:hover {
+		filter: drop-shadow(0 0 0.35rem #121C96);
+	}
+	
+	.center-text {
+		display: inline-block;
+		vertical-align: middle;
+		line-height: normal;
+	}
+	
+	.levelAreaCodes {
+		background-image: url('/lesstrainsplease/level.png');
+		width: 216px;
+		height: 96px;
+		margin: 32px;
+		margin-left: 16px;
+		margin-right: 0;
+		padding: 0;
+		text-align: center;
+		line-height: 14px
+	}
+	
+	.special_br {
+		content: '\A';
+		display: contents;
+		white-space: pre;
+	}
+	
 	.stamps {
 		margin-right: 10px;
 	}
@@ -84,6 +150,10 @@
 	
 	.projects_game:hover {
 		filter: drop-shadow(0 0 0.60rem #ffffff);
+	}
+	
+	.polaroid {
+		padding: 20px;
 	}
 	
 	.flizzy_button {
