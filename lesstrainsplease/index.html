@@ -247,7 +247,7 @@
 						+level_data.levelName
 						+"</font><br><font face='Times New Roman' size='2.5' style='color: black; text-shadow: 0px 0px #000000;'>By "
 						+level_data.levelAuthor
-						+"</font><br><br><font face='Times New Roman' size='2.5' style='color: white; text-shadow: 2px 2px #000000;'>"
+						+"</font><br><br><font id='font_" + i + "' face='Times New Roman' size='2.5' style='color: white; text-shadow: 2px 2px #000000;'>"
 						+"CLICK HERE TO COPY CODE</font></b></div></a>"
 				}
 			}).catch(error => {
@@ -257,7 +257,15 @@
 			function copyCode(id){
 				var level_data = getJSON("/scripts/lesstrainspleasecodes.json").then(data => {
 					navigator.clipboard.writeText(data.levels[id].levelCode);
+					document.getElementById('font_' + id).innerHTML = "LEVEL CODE COPIED!"
+					backNormal(id);
 				})
+			}
+			
+			function backNormal(id){
+				setTimeout(function() {
+					document.getElementById('font_' + id).innerHTML = "CLICK HERE TO COPY CODE"
+				}, 2500);
 			}
 		</script>
 		<script type="text/javascript" src="/scripts/script.js"></script>
