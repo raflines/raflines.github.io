@@ -313,10 +313,6 @@
 			outline-offset: -4px;
 		}
 
-		.maya_container {
-			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-		}
 		/*Title Bars*/
 		.maya_titlebar{
 			/*background: linear-gradient(180deg,#0997ff,#0053ee 8%,#0050ee 40%,#06f 88%,#06f 93%,#005bff 95%,#003dd7 96%,#003dd7); blue */
@@ -327,12 +323,10 @@
 			border-left: 1px solid #B82C5D;
 			border-right: 1px solid #B82C5D;
 			text-shadow: 1px 1px #9D1444;
-			margin-top: 0px;
-			padding: 3px 5px 3px 3px;
-			height: 21px;
+			width: 88px;
+			height: 31px;
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
 		}
 
 		.maya_titlebartext{
@@ -348,6 +342,7 @@
 
 		.maya_titlebarbuttons{
 			display:flex;
+			padding-right: 3px;
 		}
 
 		.maya_titlebarbuttons button{
@@ -368,12 +363,6 @@
 		.maya_titlebarbuttons button[class="maya_max"]{background-image: url("/assets/buttons/maya/max.svg");}
 		.maya_titlebarbuttons button[class="maya_close"]{background-image: url("/assets/buttons/maya/close.svg");}
 
-		/*Windows*/
-		.maya_content {
-			box-sizing: border-box;
-			text-align: center;
-			background-clip: content-box
-		}
 		.maya_stuff {
 			height: 30px;
 			font-family: "Pixelated MS Sans Serif";
