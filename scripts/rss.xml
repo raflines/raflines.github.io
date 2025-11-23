@@ -1,0 +1,18 @@
+<rss version="2.0">
+    <channel>
+        <title>raflines</title>
+        <link>https://raflines.github.io</link>
+        <description>Best RSS Feed in South America</description>
+        <language>en-us</language>
+        
+        <ttl>60</ttl>
+
+        <item>
+            <title>RSS Feed Added</title>
+            <link>https://raflines.github.io</link>
+            <guid isPermaLink="false">flines:23.11.2025:15.00</guid>
+            <pubDate>Sun, 23th November 2025 15:00:00 +3000</pubDate>
+            <description><![CDATA[<p>I Have added an RSS Feed to the site That will let you easily get all of my cool news. Flines</p><p><img src="https://raflines.github.io/blog/flines_posts/rss_feed.png" alt="" /></p>]]></description>
+        </item>
+    </channel>
+</rss>

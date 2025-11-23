@@ -156,6 +156,10 @@
 		padding: 20px;
 	}
 	
+	.polaroid:hover {
+		filter: drop-shadow(0 0 0.60rem #ffffff);
+	}
+	
 	.flizzy_button {
 		background-color: #FFFFCB;
 		border-radius: 4px;
