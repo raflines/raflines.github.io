@@ -159,12 +159,16 @@
 					<div align="left" style="width: 70%;">
 					<center>
 						<img src="/blog/funkytownnews.png" style="width: 80%; padding: 16px; filter: drop-shadow(0 0 0.60rem #9000FD);"/>
-						<br><br>
+						<br><hr class="solid" style="width: 31.25%; color: white; margin-top: 16px; margin-bottom: 16px;"><br>
 						<div id="funkyFeed">
 						
 						</div>
 					</center>
 					</div>
+				</div>
+				
+				<div>
+					<a href="/scripts/rss.xml"><button class="maya_button socials" style="margin: 16px; width: 300px">Click here to access my RSS.xml!</button></a>
 				</div>
 				
 				<hr class="solid" style="width: 62.5%; color: white; margin-top: 16px; margin-bottom: 20px;">
@@ -229,8 +233,8 @@
 			var funkyFeed = document.getElementById("funkyFeed");
 			var funkyPosts = [];
 		
-			//FARAWAY POSTS
-			fetch("https://farawaydrip30.github.io/rss.xml").then(response => {
+			//MY POSTS
+			fetch("/scripts/rss.xml").then(response => {
 				return response.text();
 			}).then(xmlString => {
 				const xmlDocument = new DOMParser().parseFromString(xmlString, "text/xml");
@@ -268,17 +272,68 @@
 					
 					var postTitle = '<b><font face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b><br>';
 					var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white;">').replace("</p>", "</font></b>").replace("<img", "<img style='border: 2px solid #FFFFFF; max-width: 500px;' ");
-					var postAuthorTime = '<b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://farawaydrip30.github.io">FarawayDrip30</a> at ' + formatted + '</font></b>';
+					var postAuthorTime = '<b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://raflines.github.io">FLINES</a> at ' + formatted + '</font></b>';
 					
-					funkyPosts.push("<div>" + postTitle + postDescription + postAuthorTime + "</div><br>");
+					funkyPosts.push(["<div>" + postTitle + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 31.25%; color: white; margin-top: 16px; margin-bottom: 16px;">', date]);
 				}
 				
-				updateFeed();
+				//FARAWAY POSTS
+				fetch("https://farawaydrip30.github.io/rss.xml").then(response => {
+					return response.text();
+				}).then(xmlString => {
+					const xmlDocument = new DOMParser().parseFromString(xmlString, "text/xml");
+					
+					//HEADER
+					var channel = xmlDocument.getElementsByTagName("channel")[0]
+					
+					var title = channel.getElementsByTagName("title")[0]
+					var link = channel.getElementsByTagName("link")[0]
+					var description = channel.getElementsByTagName("description")[0]
+					var language = channel.getElementsByTagName("description")[0]
+					
+					//POSTS
+					var items = channel.getElementsByTagName("item")
+					for (let i = 0; i < items.length; i++) {
+						var title = items[i].getElementsByTagName("title")[0]
+						var link = items[i].getElementsByTagName("link")[0]
+						var description = items[i].getElementsByTagName("description")[0]
+						var pubdate = items[i].getElementsByTagName("pubDate")[0]
+						
+						// Remove the "th", "st", "nd", "rd" from the day so JS can parse it
+						const cleaned = pubdate.textContent.replace(/(\d+)(st|nd|rd|th)/, "$1");
+
+						const date = new Date(cleaned);
+
+						// Get individual parts
+						const day = String(date.getDate()).padStart(2, '0');
+						const month = String(date.getMonth() + 1).padStart(2, '0');
+						const year = String(date.getFullYear()).slice(-2);
+						const hours = String(date.getHours()).padStart(2, '0');
+						const minutes = String(date.getMinutes()).padStart(2, '0');
+
+						// Build formatted string
+						const formatted = `${hours}:${minutes}, ${day}/${month}/${year}`;
+						
+						var postTitle = '<b><font face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b><br>';
+						var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white;">').replace("</p>", "</font></b>").replace("<img", "<img style='border: 2px solid #FFFFFF; max-width: 500px;' ");
+						var postAuthorTime = '<b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://farawaydrip30.github.io">FarawayDrip30</a> at ' + formatted + '</font></b>';
+						
+						funkyPosts.push(["<div>" + postTitle + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 31.25%; color: white; margin-top: 16px; margin-bottom: 16px;">', date]);
+					}
+					
+					updateFeed();
+				})
 			})
 			
 			function updateFeed() {
+				funkyPosts.sort(function(a,b){
+					// Turn your strings into dates, and then subtract them
+					// to get a value that is either negative, positive, or zero.
+					return new Date(b[1]) - new Date(a[1]);
+				});
+			
 				for (let i = 0; i < funkyPosts.length; i++) {
-					funkyFeed.innerHTML += funkyPosts[i];
+					funkyFeed.innerHTML += funkyPosts[i][0];
 				}
 			}
 		</script>

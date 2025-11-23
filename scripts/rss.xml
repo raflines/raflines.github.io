@@ -6,13 +6,12 @@
         <language>en-us</language>
         
         <ttl>60</ttl>
-
         <item>
-            <title>RSS Feed Added</title>
+            <title>Introducing: RAFLINES RSS FEED™</title>
             <link>https://raflines.github.io</link>
             <guid isPermaLink="false">flines:23.11.2025:15.00</guid>
-            <pubDate>Sun, 23th November 2025 15:00:00 +3000</pubDate>
-            <description><![CDATA[<p>I Have added an RSS Feed to the site That will let you easily get all of my cool news. Flines</p><p><img src="https://raflines.github.io/blog/flines_posts/rss_feed.png" alt="" /></p>]]></description>
+            <pubDate>Sun, 23th November 2025 15:00:00 -0300</pubDate>
+            <description><![CDATA[<p>I decided to implement my own RSS Feed on my site so I can automatically make blog posts! I am not sure how often I will post here but please enjoy.<br><br>(RAFLINES RSS FEED IS NOT ACTUALLY TRADEMARKED OR OWNED BY RAFLINES.)</p><p><img src="https://raflines.github.io/blog/flines_posts/rss_feed.png" alt="" /></p>]]></description>
         </item>
     </channel>
 </rss>
