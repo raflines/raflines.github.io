@@ -1,5 +1,7 @@
 	html {
-		height: -webkit-fill-available;
+		height: 100vh;
+		min-height: 100vh;
+		min-height: -webkit-fill-available;
 		background-color: black;
 		background-image: url('/assets/bg.png');
 		background-repeat: repeat;
@@ -17,7 +19,7 @@
 		background-attachment: fixed;
 		background-color: black;
 		
-		height: 100%;
+		height: 100vh;
 		min-height: 100vh;
 		min-height: -webkit-fill-available;
 		
@@ -47,6 +49,10 @@
 	@keyframes starry_night {
 		0%{background-position: 0 0;}
 		100%{background-position: -2160px 2160px;}
+	}
+
+	* {
+		cursor: url('/assets/cursor.png'), url('/assets/cursor_32.png'), auto;
 	}
 
 	*:hover {
@@ -308,7 +314,6 @@
 		.maya_button:hover {
 			background: linear-gradient(180deg,#fff,#e1e0dc 86%,#cfcac0);
 			border-color: #003c74;
-			cursor: pointer;
 		}
 		.maya_button:active {box-shadow: inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey}
 		.maya_button:focus {
