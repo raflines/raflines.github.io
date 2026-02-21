@@ -41,6 +41,15 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+	
+		<style>
+			p {
+				color: white;
+				font-weight: bold;
+				text-shadow: 2px 2px #000000;
+				font-family: Times New Roman;
+			}
+		</style>
 	</head>
 	
 	<body>
@@ -274,7 +283,7 @@
 					var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "</div><img style='border: 2px solid #FFFFFF; max-width: 500px;' ");
 					var postAuthorTime = '<p><center><b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://raflines.github.io"><img src="https://raflines.github.io/assets/favicon-16x16.png" style="vertical-align: middle;"/> FLINES</a> at ' + formatted + '</font></b></center></p>';
 					
-					funkyPosts.push(["<div>" + postTitle + "</div><br><div style='text-align: justify;'>" + postDescription.replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>") + postAuthorTime + "</div>" + '<hr class="solid" style="width: 31.25%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
+					funkyPosts.push(["<div>" + postTitle + "</div><br><div style='text-align: justify;'>" + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 31.25%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
 				}
 				
 				//FARAWAY POSTS
@@ -318,7 +327,7 @@
 						var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "</div><img style='border: 2px solid #FFFFFF; max-width: 500px;' ");
 						var postAuthorTime = '<p><center><b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://farawaydrip30.github.io"><img src="https://farawaydrip30.github.io/favicon.ico" style="width: 16px; vertical-align: middle;"/> FarawayDrip30</a> at ' + formatted + '</font></b></center></p>';
 						
-						funkyPosts.push(["<div>" + postTitle + "</div><br><div style='text-align: justify;'>" + postDescription.replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>") + postAuthorTime + "</div>" + '<hr class="solid" style="width: 31.25%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
+						funkyPosts.push(["<div>" + postTitle + "</div><br><div style='text-align: justify;'>" + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 31.25%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
 					}
 					
 					updateFeed();
