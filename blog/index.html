@@ -227,7 +227,7 @@
 				
 				<b><font face="Times New Roman" size="3" style="color: white;">
 				✰ made by flines ✰<br>
-				@ featuring blog posts by FarawayDrip30 @
+				@ featuring blog posts by FarawayDrip30 and miao @
 				</font></b>
 				<br>
 				<br>
@@ -237,7 +237,7 @@
 				
 			</center>
 		</div>
-		<!-- Javascript -->
+				<!-- Javascript -->
 		<script>
 			var funkyFeed = document.getElementById("funkyFeed");
 			var funkyPosts = [];
@@ -329,7 +329,8 @@
 						
 						funkyPosts.push(["<div>" + postTitle + "</div><br><div style='text-align: justify;'>" + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 31.25%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
 					}
-					
+				})
+				
 				//NIHAO POSTS
 				fetch("https://maybesomething.neocities.org/rss.xml").then(response => {
 					return response.text();
@@ -376,6 +377,7 @@
 					
 					updateFeed();
 				})
+				
 			})
 			
 			function updateFeed() {
