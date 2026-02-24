@@ -341,11 +341,13 @@
 					
 					//HEADER
 					var channel = xmlDocument.getElementsByTagName("channel")[0]
+
+					console.log(channel)
 					
 					var title = channel.getElementsByTagName("title")[0]
 					var link = channel.getElementsByTagName("link")[0]
 					var description = channel.getElementsByTagName("description")[0]
-					var language = channel.getElementsByTagName("description")[0]
+					//var language = channel.getElementsByTagName("description")[0]
 					
 					//POSTS
 					var items = channel.getElementsByTagName("item")
