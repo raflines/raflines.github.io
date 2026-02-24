@@ -332,7 +332,9 @@
 				})
 				
 				//NIHAO POSTS
-				fetch("https://maybesomething.neocities.org/rss.xml").then(response => {
+				fetch("https://maybesomething.neocities.org/rss.xml", {
+					mode: 'no-cors'
+				}).then(response => {
 					return response.text();
 				}).then(xmlString => {
 					const xmlDocument = new DOMParser().parseFromString(xmlString, "text/xml");
