@@ -329,10 +329,12 @@
 						
 						funkyPosts.push(["<div>" + postTitle + "</div><br><div style='text-align: justify;'>" + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 31.25%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
 					}
+
+					updateFeed()
 				})
 				
 				//NIHAO POSTS
-				fetch("https://maybesomething.neocities.org/rss.xml", {
+				/* fetch("https://maybesomething.neocities.org/rss.xml", {
 					mode: 'no-cors'
 				}).then(response => {
 					return response.text();
@@ -380,7 +382,7 @@
 					}
 					
 					updateFeed();
-				})
+				})*/
 				
 			})
 			
