@@ -7,6 +7,13 @@
         
         <ttl>60</ttl>
 		<item>
+            <title>Talk to Lil' Bayes Version 1.3</title>
+            <link>https://raflines.github.io</link>
+            <guid isPermaLink="false">flines:07.04.2026:22.35</guid>
+            <pubDate>Tue, 7th April 2026 22:35:00 -0300</pubDate>
+            <description><![CDATA[<p>I didn't skip versions 1.1 and 1.2, they were just bug fixes. This version here has the COOL stuff! I decided to post the devlog here this time rather than in Itch.io because Talking Bayes isn't a big game. Here are the changes:<ul><li>Game now properly fills screen</li><li>Decreased Lil Bayes' listening sensitivity</li><li>Ear doesn't appear anymore if he left</li><li>Lowered bird chirp volume</li><li>Increased time that it takes for him to fly away</li><li>Moved the cross a little bit higher</li><li>Ground and wall were made wider and taller</li><li>Info message doesn't disappear anymore if Bayes is gone</li><li>Removed my logo from the info screen</li><li>You can now rotate him slighty more</li><li>New mute microphone button that lets you stop Bayes from listening</li><li>Portuguese-BR language option, and new screen when you open the game to choose the languages</li><li>Info screen now has the game's name and version in the bottom</li><li>New bee event added</li><li>Clicking him now has a chance of slapping him</li><li>Clicking the painting of him and his wife will change the picture</li><li>Clicking the painting of Reman's epic Bayes drawing will make it giggle</li><li>Clicking the cross brings him back after flying away</li></ul><a href="https://flines.itch.io/lil-bayes">Hey. Bro! Play it NOW! on ITCH.IO!</a></p><p><img class="blog_img" src="https://raflines.github.io/blog/flines_posts/lilbayes2.png" alt="" /></p>]]></description>
+        </item>
+		<item>
             <title>LIL' BAYES IS SAD. CAN YOU HELP HIM?</title>
             <link>https://raflines.github.io</link>
             <guid isPermaLink="false">flines:07.04.2026:22.35</guid>
