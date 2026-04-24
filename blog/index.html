@@ -292,7 +292,7 @@
 				}
 				
 				//FARAWAY POSTS
-				fetch("https://farawaydrip30.github.io/rss.xml").then(response => {
+				fetch("https://farawaydrip30.github.io/rss/all.xml").then(response => {
 					return response.text();
 				}).then(xmlString => {
 					const xmlDocument = new DOMParser().parseFromString(xmlString, "text/xml");
