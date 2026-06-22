@@ -157,7 +157,6 @@
 	}
 	
 	.n64_game {
-		filter: drop-shadow(0 0 0.60rem #ffffff);
 		max-width: 25%;
 		width: 25%;
 		padding: 12px;
@@ -169,7 +168,7 @@
 	}
 	
 	.n64_game:hover {
-		filter: drop-shadow(0 0 1.2rem #ffffff);
+		filter: drop-shadow(0 0 0.6rem #ffffff);
 	}
 	
 	.polaroid {
