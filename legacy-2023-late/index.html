@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>flines</title>
+		
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=800, height=600, initial-scale=0.1, shrink-to-fit=no" />
+		
+		<!-- Favicon -->
+		<link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+		<link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+		<link rel="manifest" href="/assets/site.webmanifest">
+		
+		<!-- CSS & MDB -->
+		<link rel="stylesheet" href="/scripts/mdb.min.css" />
+		<link rel="stylesheet" href="/scripts/style.css">
+		
+		<!-- Social Media Preview -->
+		<meta property="og:title" content="flines Official Home Page">
+		<meta property="og:description" content="Welcome to rafael's web site page!">
+		<meta property="og:type" content="website">
+		<meta property="og:image" content="https://raflines.github.io/assets/preview/preview.png">
+		<meta property="og:url" content="https://raflines.github.io">
+		
+		<!-- Google Fonts for the new site -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600;1,700;1,800&display=swap" rel="stylesheet">
+	</head>
+	
+	<body style="
+			background-image: url('/assets/bg.png');
+			background-repeat: repeat;
+	">
+		<div id="site_canvas" style="
+			position: absolute;
+		
+			width: 800px;
+			height: 920px;
+			
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			
+			margin: auto;
+			
+			/*background-color: rgba(255, 255, 255, 0.25);*/
+		">
+		<!-- HI! IM FLIZZY! -->
+			<div id="flizzytarget" class="flizzyAppearing" style="
+				position: fixed;
+				right: 5%;
+				bottom: 5%;
+				filter: drop-shadow(0 0 0.50rem #ffffff);
+			">
+				<div style="
+					background-color: #FFFFCB;
+					width: 218px; 
+					height: 120px;
+					
+					padding-top: 15px;
+					padding-left: 8px;
+					padding-right: 8px;
+					
+					border-radius: 8px;
+					border: 2px solid black;
+					
+					margin-bottom: 25px;
+					margin-right: 50px;
+				">
+					<a style="color: #000000; font-family: 'Pixelated MS Sans Serif';">Hi! I am Flizumi, your web assistant. Would you like to save your <u>web cookies</u> now?</a>
+					<br>
+					<br>
+					<button class="flizzy_button"  onclick="flizzy_YesOrYes()" style="float: left;"><a style="color: #000000; font-family: 'Pixelated MS Sans Serif'; font-size: 16px;">Yes</a></button>
+					<button class="flizzy_button" onclick="flizzy_Disappear()" style="float: right;"><a style="color: #000000; font-family: 'Pixelated MS Sans Serif'; font-size: 16px;">No</a></button>
+
+					<svg width="20" height="30" style="position: absolute; bottom: 275px;">
+						<polygon points="18,1 18,30 1, 1" style="fill:#FFFFCB; stroke-width:2; stroke: black;"/>
+						<rect width="300" height="5" style="fill:#FFFFCB;"/>
+					</svg>
+				</div>
+				
+				<img id="FlizzyTargetImage" src="/assets/flines_assistant/flines.png" style="margin-left: 50px;"/>
+			</div>
+		
+			<!-- WEBSITE -->
+			<center>
+				<div style="
+					overflow: hidden;
+					position: relative;
+					display: flex;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					align-items: flex-start;
+					width: 100%;
+					justify-content: space-around;
+				">
+					<marquee behavior="scroll" direction="right" onmouseover="this.stop();" onmouseout="this.start();">
+					
+						<!-- last stamp -->
+						<img class="stamps" src="/assets/funkytown_stamps/flines/star.png"/>
+					
+						<!-- cris's stamp -->
+						<div style="display: inline-block; margin-right: 10px; vertical-align: top;">
+							<div class="maya_content" style="width: 200px;">
+								<div class="cris_titlebar">
+									<div class="cris_titlebartext"><h1>WanWan says!:</h1></div>
+									<div class="cris_titlebarbuttons">
+										<button class="maya_close"></button>
+									</div>
+								</div>
+								<div class="cris_stuff">
+									<div style="height: 4px;"> </div>
+									<img src="/assets/funkytown_stamps/various/wanwan.png" style="float: left; margin-left: 5px;"/>
+									<a style="color: black; font-family: 'Pixelated MS Sans Serif'; vertical-align: top; margin-left:8px; margin-right: 3px; float: left;">Fuck  you</a>
+									<button class="maya_button" style="vertical-align: top; float: right; margin-right: 5px;">OK</button>
+								</div>
+							</div>
+						</div>
+					
+						<!-- various stamps -->
+						<img class="stamps" src="/assets/funkytown_stamps/various/ceasar.png"/>
+						<img class="stamps" src="/assets/funkytown_stamps/various/craity.png"/>
+						<img class="stamps" src="/assets/funkytown_stamps/ratman/battlements.png"/>
+						<img class="stamps" src="/assets/funkytown_stamps/various/tacoman.png"/>
+					
+						<!-- maya's stamp -->
+						<div style="display: inline-block; margin-right: 10px; vertical-align: top;">
+							<div class="maya_content" style="width: 256px;">
+								<div class="maya_titlebar">
+									<div class="maya_titlebartext"><h1>maya ♡</h1></div>
+									<div class="maya_titlebarbuttons">
+										<button class="maya_close"></button>
+									</div>
+								</div>
+								<div class="maya_stuff">
+									<div style="height: 4px;"> </div>
+									<a style="color: #D53F74; font-family: 'Pixelated MS Sans Serif';">omg omg haiii :33 ♡ ^-^</a>
+								</div>
+							</div>
+						</div>
+						
+						<!-- various stamp -->						-->
+						<img class="stamps" src="/assets/funkytown_stamps/various/faraway.png"/>
+						
+						<!-- ratman's stamp -->
+						<img class="stamps" src="/assets/funkytown_stamps/ratman/ratman.png"/>
+						
+						<!-- first stamp -->
+						<img class="stamps" src="/assets/funkytown_stamps/flines/star.png"/>
+
+					</marquee>
+			</div>
+		
+			<!-- LOGO -->
+				<br>
+				<br>
+				<table border="0" cellpadding="0" cellspacing="0" width="400" height="95">
+					<tbody>
+						<td height="5">
+							<!-- flines -->
+						</td>
+						<tr>
+						<td>
+							<center>
+								<img src="assets/home_page/logo.png"/>
+							</center>
+						</td>
+						<tr height="5">
+						<td>
+							<br>
+							<img src="assets/home_page/flin.gif" width="168" height="128" align="right"/>
+							<div style="
+								width: 215px;
+								overflow-wrap: break-word;
+							">
+								<b><font face="Times New Roman" size="4" style="color: white;">
+								hello im flines and welcome to the little corner of the web dedicated to my silly projects! ✶
+								</font></b>
+							</div>
+						</td>
+					</tbody>
+				</table>
+				
+				<br>
+				<b><font face="Times New Roman" size="3" style="color: white;">
+				▼ my projects !! ▼
+				</font><br></b>
+				
+				<br>
+				<table width="750" height="300" style="border-style: dashed; border-color: white;">
+					
+				</table>
+				
+				<br>
+				<b><font face="Times New Roman" size="3" style="color: white;">
+				▼ my social media !! ▼
+				</font></b>
+				<table width="750" height="50" style="text-align: center;">
+					<td>
+						<button class="maya_button">Youtube</button>
+					</td>
+					
+					<td>
+						<button class="maya_button">Itch.io</button>
+					</td>
+					
+					<td>
+						<button class="maya_button">GitHub</button>
+					</td>
+					
+					<td>
+						<button class="maya_button">Spotify</button>
+					</td>
+				</table>
+				
+				<br>
+				<b><font face="Times New Roman" size="3" style="color: white;">
+				✰ made by flines ✰
+				</font></b>
+				
+				<br>
+				<a href=""><i class="flag flag-us"></i></a>
+				<a href=""><i class="flag flag-br"></i></a>
+			</center>
+		</div>
+		
+		<!-- Javascript -->
+		<script type="text/javascript" src="/scripts/script.js"></script>
+	</body>
+</html>

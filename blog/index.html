@@ -52,7 +52,21 @@
 			
 			.blog_img {
 				border: 2px solid #FFFFFF;
+				max-width: 350px;
+			}
+			
+			.blog {
 				max-width: 500px;
+			}
+			
+			.flines_post {
+				padding-right: 12px;
+				padding-left: 12px;
+			}
+			
+			.faraway_post {
+				padding-right: 12px;
+				padding-left: 12px;
 			}
 		</style>
 	
@@ -154,9 +168,9 @@
 				<a href="/" onclick="changeLanguage(false)"><i class="flag flag-us nav_btn"></i></a>
 				◄</font></b></center>
 				
-				<hr class="solid" style="width: 62.5%; color: white; margin-top: 16px; margin-bottom: 32px; margin-top: 32px;">
+				<hr class="solid" style="width: 62.5%; color: white; margin-top: 16px; margin-bottom: 24px; margin-top: 32px;">
 				
-				<div style="width: 100%; display: inline-table;">
+				<div style="width: 100%; display: inline-table; height: 100%;">
 					<!-- <div align="right" style="
 						width: 30%;
 						background-color: white;
@@ -175,19 +189,25 @@
 							<p>test</p>
 					</div> -->
 				
-					<div align="left" style="width: 70%;">
+					<div align="left" style="width: 100%; height: 100%;">
 					<center>
 						<img src="/blog/funkytownnews.png" style="width: 80%; padding: 16px; filter: drop-shadow(0 0 0.60rem #9000FD);"/>
-						<br><hr class="solid" style="width: 31.25%; color: white; margin-top: 16px; margin-bottom: 16px;"><br>
-						<div id="funkyFeed">
+						<br>
+						
+						<div>
+							<a href="/scripts/rss.xml"><button class="maya_button socials" style="margin: 16px; width: 300px">Add my RSS feed!</button></a>
+						</div>
+						
+						<hr class="solid" style="width: 62.5%; color: white; margin-top: 16px; margin-bottom: 16px;"><br>
+						<div id="funkyFeed" class="blog" style="width: 48.5%; float: left; border-right: 2px solid white; padding: 8px;">
+						
+						</div>
+						
+						<div id="funkyFeed2" class="blog" style="width: 48%; float: right;">
 						
 						</div>
 					</center>
 					</div>
-				</div>
-				
-				<div>
-					<a href="/scripts/rss.xml"><button class="maya_button socials" style="margin: 16px; width: 300px">Click here to access my RSS.xml!</button></a>
 				</div>
 				
 				<hr class="solid" style="width: 62.5%; color: white; margin-top: 16px; margin-bottom: 20px;">
@@ -254,6 +274,9 @@
 		<script>
 			var funkyFeed = document.getElementById("funkyFeed");
 			var funkyPosts = [];
+
+			var funkyFeed2 = document.getElementById("funkyFeed2");
+			var funkyPosts2 = [];
 		
 			//MY POSTS
 			fetch("/scripts/rss.xml").then(response => {
@@ -293,10 +316,10 @@
 					const formatted = `${hours}:${minutes}, ${day}/${month}/${year}`;
 					
 					var postTitle = '<b><font face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b><br>';
-					var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "</div><img style='border: 2px solid #FFFFFF; max-width: 500px;' ");
+					var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "</div><img style='border: 2px solid #FFFFFF; max-width: 350px;' ");
 					var postAuthorTime = '<p><center><b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://raflines.github.io"><img src="https://raflines.github.io/assets/favicon-16x16.png" style="vertical-align: middle;"/> FLINES</a> at ' + formatted + '</font></b></center></p>';
 					
-					funkyPosts.push(["<div>" + postTitle + "</div><br><div style='text-align: justify;'>" + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 31.25%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
+					funkyPosts.push(["<div class='flines_post'>" + postTitle + "</div><br><div class='flines_post' style='text-align: justify;'>" + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 40%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
 				}
 				
 				//FARAWAY POSTS
@@ -337,10 +360,10 @@
 						const formatted = `${hours}:${minutes}, ${day}/${month}/${year}`;
 						
 						var postTitle = '<b><font face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b><br>';
-						var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "</div><img style='border: 2px solid #FFFFFF; max-width: 500px;' ");
+						var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "</div><img style='border: 2px solid #FFFFFF; max-width: 350px;' ");
 						var postAuthorTime = '<p><center><b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://farawaydrip30.github.io"><img src="https://farawaydrip30.github.io/favicon.ico" style="width: 16px; vertical-align: middle;"/> FarawayDrip30</a> at ' + formatted + '</font></b></center></p>';
 						
-						funkyPosts.push(["<div>" + postTitle + "</div><br><div style='text-align: justify;'>" + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 31.25%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
+						funkyPosts2.push(["<div class='faraway_post'>" + postTitle + "</div><br><div class='faraway_post' style='text-align: justify;'>" + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 40%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
 					}
 
 					updateFeed()
@@ -408,6 +431,17 @@
 			
 				for (let i = 0; i < funkyPosts.length; i++) {
 					funkyFeed.innerHTML += funkyPosts[i][0];
+				}
+				
+				funkyPosts2.sort(function(a,b){
+					// Turn your strings into dates, and then subtract them
+					// to get a value that is either negative, positive, or zero.
+					return new Date(b[1]) - new Date(a[1]);
+				});
+			
+				for (let i = 0; i < funkyPosts2.length; i++) {
+					funkyFeed2.innerHTML += funkyPosts2[i][0];
+					
 				}
 			}
 		</script>
