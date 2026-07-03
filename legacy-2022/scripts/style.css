@@ -1,0 +1,171 @@
+			html {
+				height: 100%;
+			}
+		
+			body {
+				background-color: #080808;
+				background-image: url('');
+				background-repeat: no-repeat;
+				background-position: center;
+				background-attachment: fixed;
+				background-size: cover;
+				
+				overflow: auto;
+				
+				transition: all .2s ease-in-out;
+			}
+			
+			body::after{
+				position:absolute; width:0; height:0; overflow:hidden; z-index:-1;
+				content:url(../media/flinprojects/background_posting.png) url(../media/flinprojects/background_top_posting.png) url(../media/flinprojects/background_albums.png) url(../media/flinprojects/background_games.png) url(../media/flinprojects/background_top_albums.png) url(../media/flinprojects/background_top_games.png) url(../media/lab/background.png) url(../media/lab/background_top.png) url(../media/toyventure/background.png) url(../media/toyventure/background_top.png) url(../media/birdpals/background.png) url(../media/birdpals/background_top.png) url(../media/logos/logo_bp.png) url(../media/logos/logo_faraway.png) url(../media/logos/logo_flin.png) url(../media/logos/logo_lab.png) url(../media/logos/logo_rat.png);
+			}
+		  
+			.topnav {
+				background-color: #000000;
+				max-width: 100%;
+				margin: 0;
+				
+				border: 4px solid;
+				border-radius: 20px;
+				
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: center;
+				background-attachment: fixed;
+				
+				transition: all .2s ease-in-out;
+			}
+			
+			.logo {				
+				max-width: 500px;
+				max-height: 300px;
+				height: 115px;
+				
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.menus_background {
+				display: inline-block;
+			
+				width: fit-content;
+				background-color: rgba(255, 255, 255, 0.2);
+		
+				border: 4px solid rgba(255, 255, 255, 0.6);
+				border-radius: 20px;
+				
+				margin: 20px;
+			}
+			
+			.logo_games {
+				margin-top: 5px;
+				margin: 25px;
+			
+				max-width: 500px;
+				max-height: 300px;
+				height: 60px;
+				
+				position: relative;
+				top: 0;
+				transition: top ease 0.5s;
+			}
+			
+			.logo_games:hover {
+				top: -10px;
+			}
+			
+			.logo_flins {
+				margin-left: 25px;
+				margin-right: 25px;
+				margin-bottom: 25px;
+				margin-top: 25px;
+				
+				max-width: 500px;
+				max-height: 300px;
+				height: 60px;
+				
+				position: relative;
+				top: 0;
+				transition: top ease 0.5s;
+			}
+			
+			.logo_flins:hover {
+				top: -10px;
+			}
+			
+			.example_projects {
+				max-width: 100%;
+				height: fit-content;
+				width: 90%;
+				background-color: rgba(255, 255, 255, 0.2);
+		
+				border: 4px solid rgba(255, 255, 255, 0.6);
+				border-radius: 20px;
+				
+				display: inline-block;
+				overflow: hidden;
+			}
+			
+			.example_images {
+				margin: 10px;
+				margin-right: 10px;
+				
+				max-width: 800px;
+				max-height: 800px;
+				width: 250px;
+				
+				position: relative;
+				top: 0;
+				transition: top ease 0.5s;
+				
+				border: 3px solid rgba(0, 0, 0);
+			}
+			
+			.example_images:hover {
+				top: -10px;
+			}
+			
+			.example_logo {
+				margin: 5px;
+				margin-bottom: 0px;
+				max-width: 500px;
+				max-height: 300px;
+				
+				width: 320px;
+			}
+			
+			.example_text {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 1.5em;
+				
+				margin: 10px;
+				margin-top: 2px;
+				color: black;
+				text-decoration: none;
+			}
+			
+			.social_media {
+				height: fit-content;
+				width: fit-content;
+				background-color: rgba(255, 255, 255, 0.2);
+		
+				border: 4px solid rgba(255, 255, 255, 0.6);
+				border-radius: 20px;
+				
+				display: inline-block;
+				overflow: hidden;
+			}
+			
+			.sm_icon {
+				margin: 12px;
+			
+				max-width: 256px;
+				width: 48px;
+				
+				transition: width ease 0.5s;
+			}
+			
+			.sm_icon:hover {
+				width: 60px;
+			}
