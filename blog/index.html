@@ -52,21 +52,20 @@
 			
 			.blog_img {
 				border: 2px solid #FFFFFF;
-				max-width: 350px;
+				max-width: 450px;
 			}
 			
 			.blog {
 				max-width: 500px;
 			}
 			
-			.flines_post {
-				padding-right: 12px;
-				padding-left: 12px;
-			}
-			
-			.faraway_post {
-				padding-right: 12px;
-				padding-left: 12px;
+			.unselectable {
+				-webkit-touch-callout: none;
+				-webkit-user-select: none;
+				-khtml-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
 			}
 		</style>
 	
@@ -198,12 +197,28 @@
 							<a href="/scripts/rss.xml"><button class="maya_button socials" style="margin: 16px; width: 300px">Add my RSS feed!</button></a>
 						</div>
 						
-						<hr class="solid" style="width: 62.5%; color: white; margin-top: 16px; margin-bottom: 16px;"><br>
-						<div id="funkyFeed" class="blog" style="width: 48.5%; float: left; border-right: 2px solid white; padding: 8px;">
+						<hr class="solid" style="width: 62.5%; color: white; margin-top: 16px; margin-bottom: 4px;"><br>
+						
+						<div style="margin-bottom: 8px;">
+							<b><font face="Times New Roman" size="3" style="color: white;">
+							▼ view posts from... ▼
+							</font></b><br>
+						
+							<button onclick="switchFeed(1)" class="maya_button socials" style="margin-top: 4px; margin-right: 16px; width: 120px">FLINES!</button>
+							<button onclick="switchFeed(2)" class="maya_button socials" style="margin-top: 4px; margin-right: 16px; width: 120px">FARAWAY!</button>
+							<button onclick="switchFeed(3)" class="maya_button socials" style="margin-top: 4px; width: 120px">NIHAO!</button>
+						</div><br>
+						
+						<!-- style="width: 48.5%; float: left; border-right: 2px solid white; padding: 8px;" and width: 48% float: right;-->
+						<div id="funkyFeed" class="blog" style="" >
 						
 						</div>
 						
-						<div id="funkyFeed2" class="blog" style="width: 48%; float: right;">
+						<div id="funkyFeed2" class="blog" style="" hidden>
+						
+						</div>
+						
+						<div id="funkyFeed3" class="blog" style="" hidden>
 						
 						</div>
 					</center>
@@ -277,6 +292,9 @@
 
 			var funkyFeed2 = document.getElementById("funkyFeed2");
 			var funkyPosts2 = [];
+			
+			var funkyFeed3 = document.getElementById("funkyFeed3");
+			var funkyPosts3 = [];
 		
 			//MY POSTS
 			fetch("/scripts/rss.xml").then(response => {
@@ -315,15 +333,19 @@
 					// Build formatted string
 					const formatted = `${hours}:${minutes}, ${day}/${month}/${year}`;
 					
-					var postTitle = '<b><font face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b><br>';
-					var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "</div><img style='border: 2px solid #FFFFFF; max-width: 350px;' ");
+					// Post ID
+					var postID = title.textContent.replace(/\s/g,'').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()™'"?]/g,"")
+					
+					
+					var postTitle = '<a onclick="switchPost(' + postID + ')"><u><b><font class="unselectable" face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b></u></a><br>';
+					var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "<img style='border: 2px solid #FFFFFF; max-width: 450px;' ");
 					var postAuthorTime = '<p><center><b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://raflines.github.io"><img src="https://raflines.github.io/assets/favicon-16x16.png" style="vertical-align: middle;"/> FLINES</a> at ' + formatted + '</font></b></center></p>';
 					
-					funkyPosts.push(["<div class='flines_post'>" + postTitle + "</div><br><div class='flines_post' style='text-align: justify;'>" + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 40%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
+					funkyPosts.push(["<div style='width: 100%; height: 100%;'><div class='flines_post'>" + postTitle + "</div><br><div id='" + postID + "' class='flines_post' style='text-align: justify; background-color: black; border: solid 2px white; padding: 8px; width: 100%; height: 100%;' hidden>" + postDescription + "</div><div>" + postAuthorTime + '</div><hr class="solid" style="width: 40%; color: white; margin-top: 32px; margin-bottom: 64px;"></div>', date]);
 				}
 				
 				//FARAWAY POSTS
-				fetch("https://farawaydrip30.github.io/rss/all.xml").then(response => {
+				fetch("https://farawaydrip30.co.uk/rss/all.xml").then(response => {
 					return response.text();
 				}).then(xmlString => {
 					const xmlDocument = new DOMParser().parseFromString(xmlString, "text/xml");
@@ -359,33 +381,32 @@
 						// Build formatted string
 						const formatted = `${hours}:${minutes}, ${day}/${month}/${year}`;
 						
-						var postTitle = '<b><font face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b><br>';
-						var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "</div><img style='border: 2px solid #FFFFFF; max-width: 350px;' ");
+						// Post ID
+						var postID = title.textContent.replace(/\s/g,'').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()™'"?]/g,"")
+						
+						var postTitle = '<a onclick="switchPost(' + postID + ')"><u><b><font class="unselectable" face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b></u></a><br>';
+						var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "<img style='border: 2px solid #FFFFFF; max-width: 450px;' ");
 						var postAuthorTime = '<p><center><b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://farawaydrip30.github.io"><img src="https://farawaydrip30.github.io/favicon.ico" style="width: 16px; vertical-align: middle;"/> FarawayDrip30</a> at ' + formatted + '</font></b></center></p>';
 						
-						funkyPosts2.push(["<div class='faraway_post'>" + postTitle + "</div><br><div class='faraway_post' style='text-align: justify;'>" + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 40%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
+						funkyPosts2.push(["<div style='width: 100%; height: 100%;'><div class='faraway_post'>" + postTitle + "</div><br><div id='" + postID + "' class='faraway_post' style='text-align: justify; background-color: black; border: solid 2px white; padding: 8px; width: 100%; height: 100%;' hidden>" + postDescription + "</div><div>" + postAuthorTime + '</div><hr class="solid" style="width: 40%; color: white; margin-top: 32px; margin-bottom: 64px;"></div>', date]);
 					}
 
 					updateFeed()
 				})
 				
 				//NIHAO POSTS
-				/* fetch("https://maybesomething.neocities.org/rss.xml", {
-					mode: 'no-cors'
-				}).then(response => {
+				fetch("https://maybesomething.neocities.org/rss.xml").then(response => {
 					return response.text();
 				}).then(xmlString => {
 					const xmlDocument = new DOMParser().parseFromString(xmlString, "text/xml");
 					
 					//HEADER
 					var channel = xmlDocument.getElementsByTagName("channel")[0]
-					console.log(xmlDocument)
-					console.log(channel)
 					
 					var title = channel.getElementsByTagName("title")[0]
 					var link = channel.getElementsByTagName("link")[0]
 					var description = channel.getElementsByTagName("description")[0]
-					//var language = channel.getElementsByTagName("description")[0]
+					var language = channel.getElementsByTagName("description")[0]
 					
 					//POSTS
 					var items = channel.getElementsByTagName("item")
@@ -410,16 +431,18 @@
 						// Build formatted string
 						const formatted = `${hours}:${minutes}, ${day}/${month}/${year}`;
 						
-						var postTitle = '<b><font face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b><br>';
-						var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "</div><img style='border: 2px solid #FFFFFF; max-width: 500px;' ");
-						var postAuthorTime = '<p><center><b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://maybesomething.neocities.org/"><img src="https://maybesomething.neocities.org/favicon.ico" style="width: 16px; vertical-align: middle;"/> miao</a> at ' + formatted + '</font></b></center></p>';
+						// Post ID
+						var postID = title.textContent.replace(/\s/g,'').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()™'"?]/g,"")
 						
-						funkyPosts.push(["<div>" + postTitle + "</div><br><div style='text-align: justify;'>" + postDescription + postAuthorTime + "</div>" + '<hr class="solid" style="width: 31.25%; color: white; margin-top: 32px; margin-bottom: 64px;">', date]);
+						var postTitle = '<a onclick="switchPost(' + postID + ')"><u><b><font class="unselectable" face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b></u></a><br>';
+						var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "<img style='border: 2px solid #FFFFFF; max-width: 450px;' ");
+						var postAuthorTime = '<p><center><b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://farawaydrip30.github.io"><img src="https://farawaydrip30.github.io/favicon.ico" style="width: 16px; vertical-align: middle;"/> FarawayDrip30</a> at ' + formatted + '</font></b></center></p>';
+						
+						funkyPosts3.push(["<div style='width: 100%; height: 100%;'><div class='faraway_post'>" + postTitle + "</div><br><div id='" + postID + "' class='faraway_post' style='text-align: justify; background-color: black; border: solid 2px white; padding: 8px; width: 100%; height: 100%;' hidden>" + postDescription + "</div><div>" + postAuthorTime + '</div><hr class="solid" style="width: 40%; color: white; margin-top: 32px; margin-bottom: 64px;"></div>', date]);
 					}
-					
-					updateFeed();
-				})*/
-				
+
+					updateFeed()
+				})
 			})
 			
 			function updateFeed() {
@@ -443,6 +466,36 @@
 					funkyFeed2.innerHTML += funkyPosts2[i][0];
 					
 				}
+			}
+			
+			
+			function switchFeed(feed) {
+				switch (feed) {
+					case 1:
+						funkyFeed.removeAttribute("hidden");
+						funkyFeed2.setAttribute("hidden", "");
+						funkyFeed3.setAttribute("hidden", "");
+					break;
+					
+					case 2:
+						funkyFeed2.removeAttribute("hidden");
+						funkyFeed.setAttribute("hidden", "");
+						funkyFeed3.setAttribute("hidden", "");
+					break;
+					
+					case 3:
+						funkyFeed3.removeAttribute("hidden");
+						funkyFeed.setAttribute("hidden", "");
+						funkyFeed2.setAttribute("hidden", "");
+					break;
+				}
+			
+				//funkyFeed.hasAttribute("hidden") ? funkyFeed.removeAttribute("hidden") : funkyFeed.setAttribute("hidden", "");
+				//funkyFeed2.hasAttribute("hidden") ? funkyFeed2.removeAttribute("hidden") : funkyFeed2.setAttribute("hidden", "");
+			}
+			
+			function switchPost(postId) {
+				postId.hasAttribute("hidden") ? postId.removeAttribute("hidden") : postId.setAttribute("hidden", "");
 			}
 		</script>
 	</body>
