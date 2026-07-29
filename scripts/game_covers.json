@@ -1,0 +1,24 @@
+{
+"games":[
+  {"name":"Angry Flins", "cover":"/games/covers/angrybirds.png"},
+  {"name":"Flin is You", "cover":"/games/covers/baba.png"},
+  {"name":"The Legend of Flin:\nBreath of the Bay", "cover":"/games/covers/botw.png"},
+  {"name":"Crash Bandicoot 4:\nIt's About Flin", "cover":"/games/covers/crash4.png"},
+  {"name":"Crazy Flin", "cover":"/games/covers/crazytaxi.png"},
+  {"name":"Flinronpa 1.2 Reload", "cover":"/games/covers/danganronpa.png"},
+  {"name":"FLIN GUYS", "cover":"/games/covers/fall_guys.png"},
+  {"name":"Five Nights at Flin's", "cover":"/games/covers/fnaf1.png"},
+  {"name":"Half Flin", "cover":"/games/covers/half_life.png"},
+  {"name":"Left Flin Dead", "cover":"/games/covers/l4d.png"},
+  {"name":"Left Flin Dead 2", "cover":"/games/covers/l4d2.png"},
+  {"name":"FLIN'S Moonwalker", "cover":"/games/covers/moonwalker.png"},
+  {"name":"FLIN 3", "cover":"/games/covers/mother3.png"},
+  {"name":"FLINTASTIC EXPERIENCES 3:\nWatch Someone Pee", "cover":"/games/covers/pee.png"},
+  {"name":"FLIN Adventure", "cover":"/games/covers/sa1.png"},
+  {"name":"FLIN Adventure 2", "cover":"/games/covers/sa2.png"},
+  {"name":"SONIC & FLIN", "cover":"/games/covers/sonic_3.png"},
+  {"name":"FLIN CD", "cover":"/games/covers/sonic_cd.png"},
+  {"name":"FLIN the Hedgehog 2 (SMS)", "cover":"/games/covers/sonic2sms.png"},
+  {"name":"UNCHARTED: Drake's FLIN", "cover":"/games/covers/uncharted.png"}
+]
+}

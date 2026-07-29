@@ -170,6 +170,13 @@
 		
 	}
 	
+	.countys {
+		max-width: 15%;
+		width: 15%;
+		padding: 12px;
+		
+	}
+	
 	.projects_game:hover {
 		filter: drop-shadow(0 0 0.60rem #ffffff);
 	}

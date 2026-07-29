@@ -204,9 +204,9 @@
 							▼ view posts from... ▼
 							</font></b><br>
 						
-							<button onclick="switchFeed(1)" class="maya_button socials" style="margin-top: 4px; margin-right: 16px; width: 120px">FLINES!</button>
+							<button onclick="switchFeed(1)" class="maya_button socials" style="margin-top: 4px; margin-right: 16px; width: 120px; ">FLINES!</button>
 							<button onclick="switchFeed(2)" class="maya_button socials" style="margin-top: 4px; margin-right: 16px; width: 120px">FARAWAY!</button>
-							<button onclick="switchFeed(3)" class="maya_button socials" style="margin-top: 4px; width: 120px">NIHAO!</button>
+							<!-- <button onclick="switchFeed(3)" class="maya_button socials" style="margin-top: 4px; width: 120px">NIHAO!</button> -->
 						</div><br>
 						
 						<!-- style="width: 48.5%; float: left; border-right: 2px solid white; padding: 8px;" and width: 48% float: right;-->
@@ -395,54 +395,54 @@
 				})
 				
 				//NIHAO POSTS
-				fetch("https://maybesomething.neocities.org/rss.xml").then(response => {
-					return response.text();
-				}).then(xmlString => {
-					const xmlDocument = new DOMParser().parseFromString(xmlString, "text/xml");
+				//fetch("https://maybesomething.neocities.org/rss.xml", { method: "POST", mode: "cors"}).then(response => {
+				//	return response.text();
+				//}).then(xmlString => {
+				//	const xmlDocument = new DOMParser().parseFromString(xmlString, "text/xml");
 					
 					//HEADER
-					var channel = xmlDocument.getElementsByTagName("channel")[0]
+				//	var channel = xmlDocument.getElementsByTagName("channel")[0]
 					
-					var title = channel.getElementsByTagName("title")[0]
-					var link = channel.getElementsByTagName("link")[0]
-					var description = channel.getElementsByTagName("description")[0]
-					var language = channel.getElementsByTagName("description")[0]
+				//	var title = channel.getElementsByTagName("title")[0]
+				//	var link = channel.getElementsByTagName("link")[0]
+				//	var description = channel.getElementsByTagName("description")[0]
+				//	var language = channel.getElementsByTagName("description")[0]
 					
 					//POSTS
-					var items = channel.getElementsByTagName("item")
-					for (let i = 0; i < items.length; i++) {
-						var title = items[i].getElementsByTagName("title")[0]
-						var link = items[i].getElementsByTagName("link")[0]
-						var description = items[i].getElementsByTagName("description")[0]
-						var pubdate = items[i].getElementsByTagName("pubDate")[0]
+				//	var items = channel.getElementsByTagName("item")
+				//	for (let i = 0; i < items.length; i++) {
+				//		var title = items[i].getElementsByTagName("title")[0]
+				//		var link = items[i].getElementsByTagName("link")[0]
+				//		var description = items[i].getElementsByTagName("description")[0]
+				//		var pubdate = items[i].getElementsByTagName("pubDate")[0]
 						
 						// Remove the "th", "st", "nd", "rd" from the day so JS can parse it
-						const cleaned = pubdate.textContent.replace(/(\d+)(st|nd|rd|th)/, "$1");
+				//		const cleaned = pubdate.textContent.replace(/(\d+)(st|nd|rd|th)/, "$1");
 
-						const date = new Date(cleaned);
+				//		const date = new Date(cleaned);
 
 						// Get individual parts
-						const day = String(date.getDate()).padStart(2, '0');
-						const month = String(date.getMonth() + 1).padStart(2, '0');
-						const year = String(date.getFullYear()).slice(-2);
-						const hours = String(date.getHours()).padStart(2, '0');
-						const minutes = String(date.getMinutes()).padStart(2, '0');
+				//		const day = String(date.getDate()).padStart(2, '0');
+				//		const month = String(date.getMonth() + 1).padStart(2, '0');
+				//		const year = String(date.getFullYear()).slice(-2);
+				//		const hours = String(date.getHours()).padStart(2, '0');
+				//		const minutes = String(date.getMinutes()).padStart(2, '0');
 
 						// Build formatted string
-						const formatted = `${hours}:${minutes}, ${day}/${month}/${year}`;
+				//		const formatted = `${hours}:${minutes}, ${day}/${month}/${year}`;
 						
 						// Post ID
-						var postID = title.textContent.replace(/\s/g,'').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()™'"?]/g,"")
+				//		var postID = title.textContent.replace(/\s/g,'').replace(/[.,\/#!$%\^&\*;:{}=\-_`~()™'"?]/g,"")
 						
-						var postTitle = '<a onclick="switchPost(' + postID + ')"><u><b><font class="unselectable" face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b></u></a><br>';
-						var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "<img style='border: 2px solid #FFFFFF; max-width: 450px;' ");
-						var postAuthorTime = '<p><center><b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://farawaydrip30.github.io"><img src="https://farawaydrip30.github.io/favicon.ico" style="width: 16px; vertical-align: middle;"/> FarawayDrip30</a> at ' + formatted + '</font></b></center></p>';
+				//		var postTitle = '<a onclick="switchPost(' + postID + ')"><u><b><font class="unselectable" face="Times New Roman" size="6" style="color: white;">' + title.textContent + '</font></b></u></a><br>';
+				//		var postDescription = description.textContent.replace(/(0?[1-9]|[12][0-9]|3[01])[\/\-\.](0?[1-9]|1[012])[\/\-\.]\d{4}/, '').replace("[]>", "").replace("<p>", '<b><font face="Times New Roman" size="3" style="color: white; text-align: justify;">').replace("</p>", "</font></b>").replace("<img", "<img style='border: 2px solid #FFFFFF; max-width: 450px;' ");
+				//		var postAuthorTime = '<p><center><b><font face="Times New Roman" size="3" style="color: white;">Posted by <a class="nav_btn" href="https://farawaydrip30.github.io"><img src="https://farawaydrip30.github.io/favicon.ico" style="width: 16px; vertical-align: middle;"/> FarawayDrip30</a> at ' + formatted + '</font></b></center></p>';
 						
-						funkyPosts3.push(["<div style='width: 100%; height: 100%;'><div class='faraway_post'>" + postTitle + "</div><br><div id='" + postID + "' class='faraway_post' style='text-align: justify; background-color: black; border: solid 2px white; padding: 8px; width: 100%; height: 100%;' hidden>" + postDescription + "</div><div>" + postAuthorTime + '</div><hr class="solid" style="width: 40%; color: white; margin-top: 32px; margin-bottom: 64px;"></div>', date]);
-					}
+				//		funkyPosts3.push(["<div style='width: 100%; height: 100%;'><div class='faraway_post'>" + postTitle + "</div><br><div id='" + postID + "' class='faraway_post' style='text-align: justify; background-color: black; border: solid 2px white; padding: 8px; width: 100%; height: 100%;' hidden>" + postDescription + "</div><div>" + postAuthorTime + '</div><hr class="solid" style="width: 40%; color: white; margin-top: 32px; margin-bottom: 64px;"></div>', date]);
+				//	}
 
-					updateFeed()
-				})
+				//	updateFeed()
+				//})
 			})
 			
 			function updateFeed() {
@@ -466,6 +466,17 @@
 					funkyFeed2.innerHTML += funkyPosts2[i][0];
 					
 				}
+				
+				//funkyPosts3.sort(function(a,b){
+					// Turn your strings into dates, and then subtract them
+					// to get a value that is either negative, positive, or zero.
+				//	return new Date(b[1]) - new Date(a[1]);
+				//});
+			
+				//for (let i = 0; i < funkyPosts3.length; i++) {
+				//	funkyFeed3.innerHTML += funkyPosts3[i][0];
+					
+				//}
 			}
 			
 			
